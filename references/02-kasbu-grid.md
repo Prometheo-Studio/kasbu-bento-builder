@@ -34,11 +34,11 @@ Observed:
 - If the slot is **taller** than the block, the extra area is not part of your block. Setting `html,body{margin:0;background:#0b0b0d}` (the page's black) avoids a white strip.
 - The block can read the slot **width** (container queries) but not its height.
 
-Inferred / to verify in the user's editor:
+Thresholds used by the templates:
 - Slot widths on a given phone vary a little (≈ 290–390 px). Treat 315 px as the phone threshold for 3-column blocks and 640 px for full-width banners.
-- Whether Kasbu rounds the tile corners itself (assume yes: use `border-radius:inherit`).
+- Kasbu rounds the tile corners itself, so blocks use `border-radius:inherit`.
 
-If you can't open the user's editor, say what you assumed.
+If something looks off in the user's editor, ask for a screenshot and compare the slot size with the block.
 
 ## Choosing sizes for blocks
 - Hero / identity: 3×3 or 3×2 (+ a photo tile of 3×3).

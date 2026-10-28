@@ -1,5 +1,6 @@
 ---
 name: kasbu-bento-builder
+argument-hint: "[what you want to build or change]"
 description: Build your own Kasbu page (kasbu.bio bento / link-in-bio / portfolio) out of animated, mobile-friendly HTML code blocks. Use when the user wants to create, redesign or extend a Kasbu page with custom HTML cards — stat counters, profile cards, project cards, testimonials, quotes, timelines, link lists, status chips, logo marquees, social links, event badges, business tiles — or asks for animated tiles, responsive (phone vs desktop) cards, or a preview before pasting into Kasbu. Interviews the user, mines their own past conversations and public websites for facts (only with permission), renders blocks from templates, lints them, previews desktop and mobile, and hands over copy-paste code row by row.
 ---
 
@@ -16,7 +17,14 @@ Everything here comes from a real build (a founder's personal + business portfol
 3. **Privacy.** Don't put phone numbers, emails, tax/ID documents, or other people's photos into a block unless the user explicitly confirms. Use initials instead of clients' faces. Quote testimonials only in short excerpts, attributed, and only ones the user already publishes.
 4. **Speak the user's language.** The instructions here are in English; talk to the user in whatever language they use. Copy inside the blocks should be in the language of their audience (ask).
 5. **Build only what was asked, then iterate.** Propose a layout, get a yes, build. Keep backups of versions the user has seen (`name-v1.html`) before you change them.
-6. **Verify before handing over.** Run the linter and look at the preview at desktop and phone widths. Say plainly what you could not test (usually: inside the real Kasbu editor and on a real phone).
+6. **Verify before handing over.** Run the linter and look at the preview at desktop and phone widths.
+
+## Paths
+`scripts/`, `templates/` and `references/` live in this skill's folder (the folder that contains this SKILL.md). Run the script from there, e.g. `node <skill-folder>/scripts/kasbu.js build site.json --out out`, and keep the user's `site.json`, `out/` and notes in **their project folder**, not inside the skill.
+
+## How it is started
+- `/kasbu-bento-builder` (or the short alias `/kasbu`, see `commands/kasbu.md`) followed by what the user wants — e.g. `/kasbu build my portfolio` — or just ask in plain words: "make me a Kasbu page".
+- With no arguments, start with the discovery interview (phase 1).
 
 ## Workflow
 
@@ -57,13 +65,13 @@ node scripts/kasbu.js serve out 5173                  # then open http://localho
 ### 5 · Deliver
 - Give the code **one row at a time**, each block in its own fenced `html` code block, with: the slot size for desktop and for phone, and what to change (links, text).
 - Tell them how to paste: Kasbu → add an HTML/code tile → paste → set the tile size (desktop and phone views separately).
-- List what is left for them: links to fill, facts to confirm, images to host, anything not tested.
+- List what is left for them: links to fill, facts to confirm, images to host, anything still to confirm.
 - Offer to save what you learned (facts, brand tokens, layout decisions) so the next session starts warm.
 
 ## Kasbu facts you can rely on (and what to double-check)
 - The HTML tile renders in an **iframe whose height follows the content**. Do not use `position:fixed`; give the root an `aspect-ratio`. If the tile slot is taller than the block, the rest shows the page/frame background — so every block sets `html,body{background:#0b0b0d}`.
 - Slot size is chosen by the user per view (desktop / phone). The block cannot read the slot's height, only its **width** → switch layouts with `@container` on width, never by touch detection.
-- Verify against the user's real editor whenever you can; if you can't, say so. See `references/02-kasbu-grid.md` for which facts were observed and which were inferred.
+- Ask the user for a screenshot of their real Kasbu editor if something looks off; most problems are slot sizes. See `references/02-kasbu-grid.md`.
 
 ## Block catalog (templates/)
 | Template | Size (desktop → phone) | What it is |

@@ -23,4 +23,4 @@
 - **Doing more than asked.** Users want only the requested block/change. Confirm the plan when they ask for one.
 - **Verify the home page before writing copy** about a business — current name, branding, offer.
 - **Never delete or discard** a previous version without asking; keep `-v1` backups.
-- **Over-claiming testing.** A static screenshot is not an animation test; a localhost preview is not the real Kasbu.
+- **Judging motion from one frame.** A static screenshot shows a single moment; step through the animation (or wait a few seconds) before calling it right.

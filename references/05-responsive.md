@@ -44,6 +44,6 @@ A container cannot query its own size, and `aspect-ratio` on the container would
 1. `node scripts/kasbu.js build site.json` → preview has a **Desktop** and a **Mobile (4 columns)** section with the real slot sizes.
 2. Make a quick comparison page with the block at **307 px**, **350 px** and **320 px** wide if you're tuning one block.
 3. Look for: text overlapping the next row, button cut off, quote lines wrapping to 4+, small type (< ~11 px at 350 px width), animated elements leaving their frame.
-4. Say what you couldn't test: real phone, real Kasbu editor.
+4. After pasting into Kasbu, check both views once and send a screenshot if anything looks off.
 
 Important when testing: **never paste two different versions of the same block into one test page** — they share class names, so the old css overrides the new one and you'll "see" a bug that doesn't exist for the user.

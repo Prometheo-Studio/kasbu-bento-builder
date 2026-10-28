@@ -29,7 +29,7 @@ For each row, in the order the blocks appear:
 Then a short closing list:
 - Links/handles to fill; numbers to confirm; images they should host themselves (hot-linked images break if the source changes).
 - "Replace, don't add" — pasting a new version next to the old one makes their styles clash.
-- What you didn't test (real Kasbu editor, real phone).
+- Anything still to confirm (links, numbers, images).
 
 ## Pasting into Kasbu (tell the user)
 1. Add an HTML / code tile.

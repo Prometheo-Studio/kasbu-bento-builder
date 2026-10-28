@@ -1,0 +1,75 @@
+<!-- Block: product-card · e-commerce product tile (ONE product) · desktop 3×4 (~306×420) · phone 4×5 (~348×438)
+     Product image on a tinted stage that changes with the color swatches, badge, rating stars, price (+ old price) and a buy button.
+     Switches to the phone layout by slot width (≥ 315px). Light or dark theme.
+     data: THEME (light | dark), BADGE ("New", "-20%"), CATEGORY, NAME, DESC (optional, 2 lines), PRICE ("$89"), OLD_PRICE (optional),
+           RATING (0–5, optional), REVIEWS (optional), COLORS (up to 4 hex), IMAGE (url, transparent PNG works best), BUTTON_LABEL, URL, ACCENT -->
+<div class="pr" role="group" aria-label="{{NAME|Product name}}, {{PRICE|$0}}" style="{{RAW_ACCENT_VARS}};{{RAW_THEME}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+{{> page-bg pr}}
+.pr{container-type:inline-size;display:block;width:100%;border-radius:inherit;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif}
+.pr *{box-sizing:border-box;margin:0}
+.pr-in{position:relative;width:100%;aspect-ratio:306/420;overflow:hidden;isolation:isolate;border-radius:inherit}
+{{#if IS_DARK}}{{> noise pr-in}}{{else}}{{> noise-ink pr-in}}{{/if}}
+.pr-m{position:absolute;left:5cqw;right:5cqw;top:5cqw;height:66cqw;border-radius:5cqw;overflow:hidden;background:rgba(var(--a-rgb),.16);animation:pr-bg {{CYCLE}}s infinite;box-shadow:inset 0 0 0 1px var(--line)}
+.pr-m::before{content:"";position:absolute;left:50%;top:54%;width:72cqw;height:72cqw;margin:-36cqw 0 0 -36cqw;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),transparent);opacity:.7}
+.pr-o{position:absolute;inset:8cqw;display:grid;place-items:center;animation:pr-fl 5s ease-in-out infinite}
+.pr-o img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 4cqw 4cqw rgba(0,0,0,.22))}
+.pr-o svg{width:40cqw;height:40cqw;color:var(--ink);opacity:.8}
+.pr-sh{position:absolute;top:0;bottom:0;width:32%;left:-45%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);transform:skewX(-18deg);animation:pr-sh 6s ease-in-out infinite}
+.pr-bd{position:absolute;left:4cqw;top:4cqw;padding:1.8cqw 3.4cqw;border-radius:99px;background:var(--a);color:#fff;font:500 3.2cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
+.pr-c{position:absolute;left:5cqw;right:5cqw;top:76cqw;font:500 3cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.pr-n{position:absolute;left:5cqw;right:5cqw;top:81.5cqw;font:600 7cqw/1.12 'Inter',system-ui,sans-serif;letter-spacing:-.035em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pr-rt{position:absolute;left:5cqw;top:92cqw;display:flex;align-items:center;gap:2cqw;font:500 3.6cqw/1 'Inter',system-ui,sans-serif}
+.pr-st{position:relative;font-size:4cqw;letter-spacing:.3cqw;color:var(--line);white-space:nowrap}
+.pr-st i{position:absolute;left:0;top:0;width:{{RATING_PCT}}%;overflow:hidden;color:#f5a524;font-style:normal;white-space:nowrap}
+.pr-rt span{color:var(--soft)}
+.pr-sw{position:absolute;right:5cqw;top:91cqw;display:flex;gap:2.2cqw}
+.pr-sw i{position:relative;width:5.4cqw;height:5.4cqw;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px var(--line)}
+.pr-sw i::after{content:"";position:absolute;inset:-1.1cqw;border-radius:50%;border:1.5px solid var(--ink);opacity:0;animation:pr-sel {{CYCLE}}s infinite;animation-delay:calc(var(--i) * 3s)}
+.pr-ds{position:absolute;left:5cqw;right:5cqw;top:101cqw;font:400 4cqw/1.45 'Inter',system-ui,sans-serif;color:var(--soft);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pr-ft{position:absolute;left:5cqw;right:5cqw;bottom:5cqw;display:flex;align-items:center;justify-content:space-between;gap:3cqw}
+.pr-pc{font:700 9cqw/1 'Inter',system-ui,sans-serif;letter-spacing:-.04em;white-space:nowrap}
+.pr-pc s{margin-left:2cqw;font:500 4.4cqw/1 'Inter',system-ui,sans-serif;letter-spacing:0;color:var(--soft)}
+.pr-bt{position:relative;overflow:hidden;flex:none;height:13cqw;padding:0 6cqw;border-radius:99px;display:flex;align-items:center;gap:2.4cqw;background:var(--ink);color:var(--bg);font:600 4.4cqw/1 'Inter',system-ui,sans-serif;text-decoration:none;-webkit-tap-highlight-color:transparent;animation:pr-pu 2.4s infinite}
+.pr-bt:hover{transform:scale(1.04)}
+.pr-bt i{font-style:normal;transition:transform .2s}
+.pr-bt:hover i{transform:translateX(1cqw)}
+{{RAW_KF}}
+@keyframes pr-fl{0%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-2.4cqw) rotate(1deg)}100%{transform:translateY(0) rotate(-1deg)}}
+@keyframes pr-sh{0%,55%{transform:translateX(0) skewX(-18deg)}90%,100%{transform:translateX(520%) skewX(-18deg)}}
+@keyframes pr-pu{0%{box-shadow:0 0 0 0 rgba(var(--a-rgb),.5)}70%,100%{box-shadow:0 0 0 3.6cqw rgba(var(--a-rgb),0)}}
+@container (min-width:315px){
+.pr-in{aspect-ratio:348/438}
+.pr-m{left:4cqw;right:4cqw;top:4cqw;height:56cqw;border-radius:4.4cqw}
+.pr-m::before{width:62cqw;height:62cqw;margin:-31cqw 0 0 -31cqw}
+.pr-o{inset:6cqw}
+.pr-o svg{width:34cqw;height:34cqw}
+.pr-bd{left:3.4cqw;top:3.4cqw;font-size:2.8cqw;padding:1.5cqw 3cqw}
+.pr-c{left:4cqw;top:65cqw;font-size:2.7cqw}
+.pr-n{left:4cqw;right:4cqw;top:70cqw;font-size:6.2cqw}
+.pr-rt{left:4cqw;top:80.5cqw;font-size:3.2cqw}
+.pr-st{font-size:3.6cqw}
+.pr-sw{right:4cqw;top:79.8cqw}
+.pr-sw i{width:4.8cqw;height:4.8cqw}
+.pr-ds{left:4cqw;right:4cqw;top:90cqw;font-size:3.6cqw}
+.pr-ft{left:4cqw;right:4cqw;bottom:4cqw}
+.pr-pc{font-size:8cqw}.pr-pc s{font-size:3.8cqw}
+.pr-bt{height:12cqw;padding:0 5cqw;font-size:4cqw}
+}
+@media (prefers-reduced-motion:reduce){.pr *,.pr-in::after{animation:none!important}.pr-sw i:first-child::after{opacity:1}}
+</style>
+<div class="pr-in">
+<div class="pr-m" aria-hidden="true">
+<div class="pr-o">{{#if IMAGE}}<img src="{{IMAGE}}" alt="">{{else}}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>{{/if}}</div>
+<i class="pr-sh"></i>
+{{#if BADGE}}<span class="pr-bd">{{BADGE}}</span>{{/if}}
+</div>
+{{#if CATEGORY}}<div class="pr-c">{{CATEGORY}}</div>{{/if}}
+<h3 class="pr-n">{{NAME|Product name}}</h3>
+{{#if HAS_RATING}}<div class="pr-rt" aria-label="Rated {{RATING}} out of 5"><span class="pr-st" aria-hidden="true">★★★★★<i>★★★★★</i></span><b>{{RATING}}</b>{{#if REVIEWS}}<span>({{REVIEWS}})</span>{{/if}}</div>{{/if}}
+<div class="pr-sw" aria-hidden="true">{{#each COLOR_LIST}}<i style="--c:{{.hex}};--i:{{.i}}"></i>{{/each}}</div>
+{{#if DESC}}<p class="pr-ds">{{DESC}}</p>{{/if}}
+<div class="pr-ft"><div class="pr-pc">{{PRICE|$0}}{{#if OLD_PRICE}}<s>{{OLD_PRICE}}</s>{{/if}}</div><a class="pr-bt" href="{{URL|https://example.com}}" target="_blank" rel="noopener">{{BUTTON_LABEL|Add to cart}} <i>→</i></a></div>
+</div>
+</div>

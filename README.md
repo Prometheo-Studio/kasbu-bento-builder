@@ -5,7 +5,7 @@ A Claude skill that builds animated, responsive **bento-grid portfolios for Kasb
 What it does:
 1. **Interviews you** (who you are, what you sell, links, accent color) and — only with your permission — recovers facts from past conversations/memory and public sources like your website.
 2. **Plans** the grid for desktop and phone.
-3. **Builds** self-contained blocks from 15 animated templates (counters, typed roles, orbiting socials, marquees, testimonials, quotes, timelines, link lists, status chip, event badge…), themed with one accent color.
+3. **Builds** self-contained blocks from 17 animated templates (counters, typed roles, orbiting socials, marquees, testimonials, quotes, timelines, link lists, status chip, product card, restaurant menu, event badge…), themed with one accent color.
 4. **Previews** both layouts in the Claude Code browser pane (or a private Artifact).
 5. **Delivers** the code row by row, with sizes and what to edit.
 
@@ -81,7 +81,7 @@ Edit `site.json` (your data, accent, layout) and rebuild.
 - `SKILL.md` — instructions for Claude
 - `commands/kasbu.md` — the optional `/kasbu` alias
 - `references/` — discovery, grid, design system, animations, responsive, preview/delivery, pitfalls, block catalog
-- `templates/` — 15 block templates + shared partials
+- `templates/` — 17 block templates + shared partials
 - `scripts/kasbu.js` — build / lint / serve
 - `examples/` — demo `site.json` and the page built for this skill
 

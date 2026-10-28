@@ -18,6 +18,8 @@ Templates live in `templates/`. Each starts with a comment header (`Block: … d
 | `timeline-card` | 3×3 / 4×4 | Vertical timeline, dots light in turn | `TAG`, `TITLE`, `ITEMS[{year,text}]` (2–4) |
 | `link-list` | 3×2 / 4×2 | Up to 3 link rows, travelling highlight | `TAG`, `LINKS[{label,hint,url}]` (≤3) |
 | `status-tile` | 2×1 | Pulsing dot + short status | `STATUS` (≤18 chars), `SUB` (≤24), `URL?` |
+| `product-card` | 3×4 / 4×5 | One e-commerce product (single item), light or dark | `THEME`, `BADGE`, `CATEGORY`, `NAME`, `DESC?`, `PRICE`, `OLD_PRICE?`, `RATING?`, `REVIEWS?`, `COLORS` (≤4 hex), `IMAGE?`, `BUTTON_LABEL`, `URL` |
+| `menu-card` | 3×4 / 4×5 | Restaurant / café / service menu, light or dark | `THEME`, `SUBTITLE`, `TITLE`, `CATEGORIES[{name, items[{name,desc,price,tag}]}]` (≤3 × ≤4), `NOTE?`, `URL?`, `URL_LABEL?` |
 | `testimonials-banner` | 8×2 / 4×2 | Rotating client quotes, progress bar, chips/avatars | `QUOTES[{text,name,role,company,tag,initials?}]` (2–5), `TAG_LABEL` |
 
 Available icons: `social-orbit` → linkedin instagram x youtube github tiktok facebook globe mail. `role-pills` → pen puzzle spark win mega bulb layers target route (see the template for the rest).

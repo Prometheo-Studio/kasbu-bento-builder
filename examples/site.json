@@ -432,6 +432,118 @@
         "SUB": "Next slot: June",
         "URL": "https://example.com/call"
       }
+    },
+    {
+      "id": "product",
+      "template": "product-card",
+      "data": {
+        "THEME": "light",
+        "BADGE": "New",
+        "CATEGORY": "Running shoes",
+        "NAME": "Aero Runner 2",
+        "DESC": "Light, breathable and built for daily miles.",
+        "PRICE": "$89",
+        "OLD_PRICE": "$119",
+        "RATING": 4.8,
+        "REVIEWS": 128,
+        "COLORS": [
+          "#ff5a36",
+          "#3d7bff",
+          "#16140f",
+          "#12b5a6"
+        ],
+        "BUTTON_LABEL": "Add to cart",
+        "URL": "https://example.com/shop/aero-runner"
+      }
+    },
+    {
+      "id": "menu",
+      "template": "menu-card",
+      "data": {
+        "THEME": "dark",
+        "SUBTITLE": "Open daily · 8am – 10pm",
+        "TITLE": "Menu",
+        "CATEGORIES": [
+          {
+            "name": "Starters",
+            "items": [
+              {
+                "name": "Burrata",
+                "desc": "Tomato, basil, olive oil",
+                "price": "$12",
+                "tag": "V"
+              },
+              {
+                "name": "Tuna tartare",
+                "desc": "Avocado, sesame, lime",
+                "price": "$15"
+              },
+              {
+                "name": "Soup of the day",
+                "desc": "Ask your server",
+                "price": "$8"
+              },
+              {
+                "name": "Crispy calamari",
+                "desc": "Lemon aioli",
+                "price": "$13"
+              }
+            ]
+          },
+          {
+            "name": "Mains",
+            "items": [
+              {
+                "name": "Wild mushroom risotto",
+                "desc": "Parmesan, thyme",
+                "price": "$22",
+                "tag": "V"
+              },
+              {
+                "name": "Grilled sea bass",
+                "desc": "Seasonal vegetables",
+                "price": "$28",
+                "tag": "Chef"
+              },
+              {
+                "name": "Slow-cooked short rib",
+                "desc": "Potato purée, jus",
+                "price": "$31"
+              },
+              {
+                "name": "Spicy rigatoni",
+                "desc": "Nduja, tomato, basil",
+                "price": "$19",
+                "tag": "Hot"
+              }
+            ]
+          },
+          {
+            "name": "Desserts",
+            "items": [
+              {
+                "name": "Tiramisu",
+                "desc": "Espresso, mascarpone",
+                "price": "$9"
+              },
+              {
+                "name": "Dark chocolate tart",
+                "desc": "Sea salt, cream",
+                "price": "$10"
+              },
+              {
+                "name": "Lemon sorbet",
+                "desc": "Fresh mint",
+                "price": "$7",
+                "tag": "V"
+              }
+            ]
+          }
+        ],
+        "NOTE": "Prices in USD",
+        "URL": "https://example.com/menu",
+        "URL_LABEL": "Full menu"
+      }
     }
   ],
   "layout": {
@@ -596,6 +708,20 @@
         "row": 15,
         "w": 2,
         "h": 1
+      },
+      {
+        "id": "product",
+        "col": 1,
+        "row": 19,
+        "w": 3,
+        "h": 4
+      },
+      {
+        "id": "menu",
+        "col": 4,
+        "row": 19,
+        "w": 3,
+        "h": 4
       }
     ],
     "mobile": [
@@ -696,6 +822,20 @@
         "row": 22,
         "w": 4,
         "h": 2
+      },
+      {
+        "id": "product",
+        "col": 1,
+        "row": 24,
+        "w": 4,
+        "h": 5
+      },
+      {
+        "id": "menu",
+        "col": 1,
+        "row": 29,
+        "w": 4,
+        "h": 5
       }
     ]
   }

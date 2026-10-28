@@ -17,7 +17,7 @@ ${dark ? grainLight(p) : grainInk(p)}
 @media (prefers-reduced-motion:reduce){.${p} *,.${p}::after{animation:none!important}}`;
 
 // ---------- stat tiles (1x1) ----------
-[['sa', 15, 'templates'], ['sb', 8, 'guides'], ['sc', 2, 'views'], ['sd', 4, 'phases']].forEach(([p, n, label]) => {
+[['sa', 17, 'templates'], ['sb', 8, 'guides'], ['sc', 2, 'views'], ['sd', 4, 'phases']].forEach(([p, n, label]) => {
   const reel = Array.from({ length: n + 1 }, (_, i) => `<span>${i}</span>`).join('');
   out('stat-' + label, `<!-- Block: editorial stat tile · 1×1 · counter climbs to ${n} -->
 <div class="${p}" role="img" aria-label="${n} ${label}">
@@ -145,11 +145,11 @@ ${base('ct', '5/8')}
 </div>`);
 
 // ---------- marquee of templates (3x2 / 4x2) ----------
-const names = ['Stat counter', 'Profile card', 'About photo', 'Role pills', 'Event badge', 'Project card', 'Logo marquee', 'CTA pulse', 'Social orbit', 'Business tile', 'Testimonials', 'Quote card', 'Timeline', 'Link list', 'Status tile'];
+const names = ['Stat counter', 'Profile card', 'About photo', 'Role pills', 'Event badge', 'Project card', 'Logo marquee', 'CTA pulse', 'Social orbit', 'Business tile', 'Testimonials', 'Quote card', 'Timeline', 'Link list', 'Status tile', 'Product card', 'Menu card'];
 const set = (arr) => arr.map((s) => `<span>${s}</span>`).join('');
 const row1 = names.slice(0, 8), row2 = names.slice(8);
 out('catalog', `<!-- Block: editorial template marquee · desktop 3×2 · phone 4×2 -->
-<div class="cg" role="group" aria-label="Fifteen ready-made block templates">
+<div class="cg" role="group" aria-label="Seventeen ready-made block templates">
 <style>
 ${FONTS}
 html,body{margin:0;background:${PAPER}}
@@ -171,7 +171,7 @@ ${grainInk('cg-in')}
 @media (prefers-reduced-motion:reduce){.cg *,.cg-in::after{animation:none!important}}
 </style>
 <div class="cg-in">
-<div class="cg-k">[ 15 templates ]</div>
+<div class="cg-k">[ 17 templates ]</div>
 <h3 class="cg-h">Blocks, <em>ready to paste.</em></h3>
 <div class="cg-r" aria-hidden="true"><div>${set(row1)}${set(row1)}</div><div>${set(row1)}${set(row1)}</div></div>
 <div class="cg-r b" aria-hidden="true"><div>${set(row2)}${set(row2)}${set(row2)}</div><div>${set(row2)}${set(row2)}${set(row2)}</div></div>
@@ -182,7 +182,7 @@ ${grainInk('cg-in')}
 const phases = [
   ['pa', '01', 'Discover', 'A short interview, plus your sites and past chats, only with your OK.', ['Interview', 'Sources']],
   ['pb', '02', 'Plan', 'Sizes for the 8-column desktop grid and the 4-column phone grid.', ['Desktop', 'Phone']],
-  ['pc', '03', 'Build', 'Animated blocks from 15 templates, one accent color, linted.', ['Templates', 'Lint']],
+  ['pc', '03', 'Build', 'Animated blocks from 17 templates, one accent color, linted.', ['Templates', 'Lint']],
   ['pd', '04', 'Preview', 'See both views side by side, then copy the code block by block.', ['Browser', 'Artifact']],
 ];
 phases.forEach(([p, num, name, desc, tags], i) => out('phase-' + name.toLowerCase(), `<!-- Block: editorial phase card · 2×3 -->

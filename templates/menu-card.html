@@ -1,0 +1,62 @@
+<!-- Block: menu-card · restaurant / café / service menu · desktop 3×4 (~306×420) · phone 4×5 (~348×438)
+     Up to 3 categories (tabs light up in turn, the list cross-fades) with up to 4 items each: name, price, short description, optional tag.
+     Hover pauses it. Switches to the phone layout by slot width (≥ 315px). Light or dark theme.
+     With reduced motion all categories are listed and the card scrolls.
+     data: THEME (dark | light), TAG ("menu"), TITLE ("Menu"), SUBTITLE ("Open daily · 8am–10pm"),
+           CATEGORIES ([{name, items:[{name, desc, price, tag}]}]), NOTE (small footer line), URL + URL_LABEL (optional "full menu" button), ACCENT -->
+<div class="mn" role="group" aria-label="{{TITLE|Menu}}" style="{{RAW_ACCENT_VARS}};{{RAW_THEME}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+{{> page-bg mn}}
+.mn{container-type:inline-size;display:block;width:100%;border-radius:inherit;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif}
+.mn *{box-sizing:border-box;margin:0}
+.mn-in{position:relative;width:100%;aspect-ratio:306/420;overflow:hidden;isolation:isolate;border-radius:inherit;background:radial-gradient(90% 50% at 100% 0%,rgba(var(--a-rgb),.2),transparent 70%),var(--bg)}
+{{#if IS_DARK}}{{> noise mn-in}}{{else}}{{> noise-ink mn-in}}{{/if}}
+.mn-k{position:absolute;left:5cqw;right:5cqw;top:6cqw;display:flex;align-items:center;gap:2cqw;font:500 3cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.mn-k b{width:2.2cqw;height:2.2cqw;border-radius:50%;background:var(--a);animation:mn-pu 2.4s infinite}
+.mn-t{position:absolute;left:5cqw;right:5cqw;top:12cqw;font:400 14cqw/1 'Instrument Serif',Georgia,serif;letter-spacing:-.03em}
+.mn-tb{position:absolute;left:5cqw;right:5cqw;top:31cqw;display:flex;gap:2cqw;flex-wrap:wrap}
+.mn-tb span{padding:2cqw 3.6cqw;border-radius:99px;border:1px solid var(--line);color:var(--soft);font:500 3.4cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;animation:mn-t {{CYCLE}}s infinite;animation-delay:calc(var(--i) * 5s)}
+.mn-pn{position:absolute;left:5cqw;right:5cqw;top:45cqw;bottom:22cqw}
+.mn-p{position:absolute;inset:0;opacity:0;animation:mn-p {{CYCLE}}s infinite;animation-delay:calc(var(--i) * 5s)}
+.mn:hover .mn-p,.mn:hover .mn-tb span{animation-play-state:paused}
+.mn-i{margin-bottom:4.2cqw}
+.mn-r{display:flex;align-items:baseline;gap:2cqw}
+.mn-n{font:600 5cqw/1.2 'Inter',system-ui,sans-serif;letter-spacing:-.015em}
+.mn-r em{align-self:center;padding:.9cqw 1.8cqw;border:1px solid rgba(var(--a-rgb),.6);border-radius:99px;color:var(--pc);font:500 2.5cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;font-style:normal;white-space:nowrap}
+.mn-d{flex:1;min-width:2cqw;border-bottom:1px dotted var(--line);transform:translateY(-1cqw)}
+.mn-pr{font:500 4.8cqw/1 'JetBrains Mono',ui-monospace,monospace;color:var(--pc);white-space:nowrap}
+.mn-i p{margin-top:.8cqw;font:400 3.6cqw/1.4 'Inter',system-ui,sans-serif;color:var(--soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mn-ft{position:absolute;left:5cqw;right:5cqw;bottom:5cqw;display:flex;align-items:center;justify-content:space-between;gap:3cqw}
+.mn-nt{font:400 3.2cqw/1.4 'Inter',system-ui,sans-serif;color:var(--soft)}
+.mn-bt{flex:none;margin-left:auto;height:11cqw;padding:0 5cqw;border-radius:99px;display:flex;align-items:center;gap:2cqw;background:var(--ink);color:var(--bg);font:600 4cqw/1 'Inter',system-ui,sans-serif;text-decoration:none;-webkit-tap-highlight-color:transparent;animation:mn-bp 2.6s infinite}
+.mn-bt:hover{transform:scale(1.04)}
+{{#if MULTI}}{{RAW_KF}}{{else}}.mn-p{opacity:1;animation:none}{{/if}}
+@keyframes mn-pu{0%{box-shadow:0 0 0 0 rgba(var(--a-rgb),.6)}70%,100%{box-shadow:0 0 0 2.6cqw rgba(var(--a-rgb),0)}}
+@keyframes mn-bp{0%{box-shadow:0 0 0 0 rgba(var(--a-rgb),.45)}70%,100%{box-shadow:0 0 0 3.2cqw rgba(var(--a-rgb),0)}}
+@container (min-width:315px){
+.mn-in{aspect-ratio:348/438}
+.mn-k{left:4.4cqw;top:5cqw;font-size:2.7cqw}
+.mn-t{left:4.4cqw;top:9.5cqw;font-size:11.5cqw}
+.mn-tb{left:4.4cqw;top:25cqw}
+.mn-tb span{padding:1.7cqw 3.2cqw;font-size:3cqw}
+.mn-pn{left:4.4cqw;right:4.4cqw;top:36cqw;bottom:19cqw}
+.mn-i{margin-bottom:3cqw}
+.mn-n{font-size:4.5cqw}.mn-pr{font-size:4.2cqw}.mn-i p{font-size:3.2cqw}
+.mn-ft{left:4.4cqw;right:4.4cqw;bottom:4cqw}
+.mn-bt{height:10cqw;font-size:3.6cqw}
+}
+@media (prefers-reduced-motion:reduce){
+.mn *,.mn-in::after{animation:none!important}
+.mn-pn{overflow:auto}
+.mn-p{position:static;opacity:1;transform:none;margin-bottom:4cqw}
+}
+</style>
+<div class="mn-in">
+<div class="mn-k"><b></b>{{SUBTITLE|Open daily}}</div>
+<h3 class="mn-t">{{TITLE|Menu}}</h3>
+{{#if MULTI}}<div class="mn-tb" aria-hidden="true">{{#each CAT_LIST}}<span style="--i:{{.i}}">{{.name}}</span>{{/each}}</div>{{/if}}
+<div class="mn-pn">{{#each CAT_LIST}}<section class="mn-p" style="--i:{{.i}}" aria-label="{{.name}}">{{#each .items}}<div class="mn-i"><div class="mn-r"><span class="mn-n">{{.name}}</span>{{#if .tag}}<em>{{.tag}}</em>{{/if}}<span class="mn-d"></span><span class="mn-pr">{{.price}}</span></div>{{#if .desc}}<p>{{.desc}}</p>{{/if}}</div>{{/each}}</section>{{/each}}</div>
+<div class="mn-ft">{{#if NOTE}}<span class="mn-nt">{{NOTE}}</span>{{/if}}{{#if URL}}<a class="mn-bt" href="{{URL}}" target="_blank" rel="noopener">{{URL_LABEL|Full menu}} <span>→</span></a>{{/if}}</div>
+</div>
+</div>

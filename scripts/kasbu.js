@@ -120,6 +120,11 @@ function renderTemplate(tpl, data) {
   return renderNodes(parse(resolvePartials(tpl)).children, { data, item: undefined, index: 0 });
 }
 
+// shared light/dark surface variables for card templates (product-card, menu-card)
+const themeVars = (dark) => (dark
+  ? '--bg:#0d0d10;--ink:#f4f1ec;--soft:#9b9aa3;--line:rgba(255,255,255,.14);--card:rgba(255,255,255,.06);--pc:var(--a-lt)'
+  : '--bg:#f6f3ee;--ink:#14120e;--soft:#6a655c;--line:rgba(20,18,14,.14);--card:#ffffff;--pc:var(--a-dk)');
+
 /* ------------------------------------------------ derived data per template */
 const derive = {
   'stat-counter'(d) {
@@ -150,6 +155,37 @@ const derive = {
       out.ROWS = Math.ceil(c / 8);
     }
     return out;
+  },
+  'product-card'(d) {
+    const dark = (d.THEME || 'light') === 'dark';
+    const cols = (d.COLORS && d.COLORS.length ? d.COLORS : []).slice(0, 4);
+    const n = cols.length, per = 3, f = (v) => +v.toFixed(2);
+    let kf;
+    if (!n) {
+      kf = '@keyframes pr-bg{0%,100%{background:rgba(var(--a-rgb),.16)}}@keyframes pr-sel{0%,100%{opacity:0}}';
+    } else {
+      const s = 100 / n;
+      const tint = (c) => rgbToHex(mix(hexToRgb(c), dark ? [10, 10, 12] : [255, 255, 255], dark ? 0.62 : 0.72));
+      const stops = cols.map((c, i) => `${f(i * s)}%,${f((i + 1) * s - s * 0.12)}%{background:${tint(c)}}`).join('');
+      kf = `@keyframes pr-bg{${stops}100%{background:${tint(cols[0])}}}@keyframes pr-sel{0%,${f(s * 0.88)}%{opacity:1;transform:scale(1)}${f(s * 0.96)}%,100%{opacity:0;transform:scale(.7)}}`;
+    }
+    const r = parseFloat(d.RATING);
+    return {
+      IS_DARK: dark, RAW_THEME: themeVars(dark),
+      COLOR_LIST: cols.map((hex, i) => ({ hex, i })), CYCLE: (n || 1) * per, RAW_KF: kf,
+      HAS_RATING: !Number.isNaN(r), RATING_PCT: Number.isNaN(r) ? 0 : f(Math.max(0, Math.min(5, r)) / 5 * 100),
+    };
+  },
+  'menu-card'(d) {
+    const dark = (d.THEME || 'dark') === 'dark';
+    const cats = (d.CATEGORIES && d.CATEGORIES.length ? d.CATEGORIES : [{ name: 'Menu', items: [] }]).slice(0, 3)
+      .map((c, i) => ({ ...c, i, items: (c.items || []).slice(0, 4) }));
+    const n = cats.length, s = 100 / n, f = (v) => +v.toFixed(2);
+    return {
+      IS_DARK: dark, RAW_THEME: themeVars(dark), CAT_LIST: cats, MULTI: n > 1, CYCLE: n * 5,
+      RAW_KF: `@keyframes mn-p{0%{opacity:0;transform:translateY(1.6cqw)}${f(s * 0.08)}%{opacity:1;transform:translateY(0)}${f(s * 0.9)}%{opacity:1;transform:translateY(0)}${f(s)}%{opacity:0;transform:translateY(-1.6cqw)}100%{opacity:0;transform:translateY(-1.6cqw)}}
+@keyframes mn-t{0%,${f(s * 0.93)}%{background:var(--ink);color:var(--bg);border-color:var(--ink)}${f(s * 1.02)}%,100%{background:transparent;color:var(--soft);border-color:var(--line)}}`,
+    };
   },
   'quote-card'(d) {
     return d.INITIALS || !d.NAME ? {} : { INITIALS: d.NAME.split(/\s+/).map((w) => w[0]).slice(0, 2).join('').toUpperCase() };

@@ -1,7 +1,7 @@
 ---
 name: kasbu-bento-builder
 argument-hint: "[what you want to build or change]"
-description: Build your own Kasbu page (kasbu.bio bento / link-in-bio / portfolio) out of animated, mobile-friendly HTML code blocks. Use when the user wants to create, redesign or extend a Kasbu page with custom HTML cards — stat counters, profile cards, project cards, testimonials, quotes, timelines, link lists, status chips, logo marquees, social links, event badges, business tiles — or asks for animated tiles, responsive (phone vs desktop) cards, or a preview before pasting into Kasbu. Interviews the user, mines their own past conversations and public websites for facts (only with permission), renders blocks from templates, lints them, previews desktop and mobile, and hands over copy-paste code row by row.
+description: Build your own Kasbu page (kasbu.bio bento / link-in-bio / portfolio) out of animated, mobile-friendly HTML code blocks. Use when the user wants to create, redesign or extend a Kasbu page with custom HTML cards — stat counters, profile cards, project cards, testimonials, quotes, timelines, link lists, status chips, e-commerce product cards, restaurant/café menus, logo marquees, social links, event badges, business tiles — or asks for animated tiles, responsive (phone vs desktop) cards, or a preview before pasting into Kasbu. Interviews the user, mines their own past conversations and public websites for facts (only with permission), renders blocks from templates, lints them, previews desktop and mobile, and hands over copy-paste code row by row.
 ---
 
 # Kasbu Bento Builder
@@ -91,6 +91,8 @@ node scripts/kasbu.js serve out 5173                  # then open http://localho
 | `timeline-card` | 3×3 → 4×4 | Vertical timeline (2–4 items) whose dots light in turn |
 | `link-list` | 3×2 → 4×2 | Up to 3 link rows with a travelling highlight |
 | `status-tile` | 2×1 → 2×1 | Pulsing dot + short status ("Open to projects") |
+| `product-card` | 3×4 → 4×5 | One e-commerce product: tinted stage that follows the color swatches, badge, rating, price, buy button |
+| `menu-card` | 3×4 → 4×5 | Restaurant / café / service menu: category tabs that cycle, items with prices, tags, "full menu" button |
 
 ## Files
 - `scripts/kasbu.js` — `build`, `lint`, `serve` (Node 18+, no dependencies).

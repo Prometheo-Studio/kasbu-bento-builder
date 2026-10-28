@@ -37,8 +37,8 @@
       "file": "src/manifesto.html"
     },
     {
-      "id": "soon",
-      "file": "src/soon.html"
+      "id": "github",
+      "file": "src/github.html"
     },
     {
       "id": "phase-discover",
@@ -124,7 +124,7 @@
         "h": 3
       },
       {
-        "id": "soon",
+        "id": "github",
         "col": 7,
         "row": 4,
         "w": 2,
@@ -231,7 +231,7 @@
         "h": 3
       },
       {
-        "id": "soon",
+        "id": "github",
         "col": 3,
         "row": 14,
         "w": 2,

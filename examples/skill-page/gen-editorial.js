@@ -209,24 +209,31 @@ ${base(p, '5/8')}
 <div class="${p}-g">${tags.map((t) => `<span>${t}</span>`).join('')}</div>
 </div>`));
 
-// ---------- socials soon (2x3) ----------
-out('soon', `<!-- Block: editorial "links soon" · 2×3. Replace the three rows with <a href> links when you have them -->
-<div class="sk" role="group" aria-label="Links coming soon">
+// ---------- GitHub card (2x3) ----------
+const REPO = 'https://github.com/Prometheo-Studio/kasbu-bento-builder';
+out('github', `<!-- Block: editorial GitHub card · 2×3 · links to the repository, SKILL.md and README -->
+<div class="gh" role="group" aria-label="kasbu-bento-builder on GitHub">
 <style>
-${base('sk', '5/8')}
-.sk-k{position:absolute;left:8cqw;top:8cqw;font:500 5cqw/1 ${MONO};letter-spacing:.12em;text-transform:uppercase;color:var(--m);display:flex;gap:3cqw;align-items:center}
-.sk-k b{padding:1.6cqw 3cqw;border-radius:99px;background:var(--ac);color:var(--p);font-weight:500;animation:sk-p 2.4s infinite}
-.sk-t{position:absolute;left:8cqw;right:6cqw;top:24cqw;font:400 17cqw/.96 ${SERIF};letter-spacing:-.035em}
-.sk-t em{color:var(--ac);display:block}
-.sk-l{position:absolute;left:8cqw;right:8cqw;bottom:8cqw;list-style:none;padding:0}
-.sk-l li{position:relative;overflow:hidden;display:flex;justify-content:space-between;padding:4cqw 0;border-top:1px solid var(--l);font:500 5cqw/1 ${MONO};letter-spacing:.06em;text-transform:uppercase;color:var(--m)}
-.sk-l li::after{content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;background:linear-gradient(90deg,transparent,rgba(91,61,245,.14),transparent);animation:sk-s 3.6s ease-in-out infinite;animation-delay:calc(var(--d) * .5s)}
-@keyframes sk-s{0%,30%{transform:translateX(0)}80%,100%{transform:translateX(480%)}}
-@keyframes sk-p{0%{box-shadow:0 0 0 0 rgba(91,61,245,.5)}70%,100%{box-shadow:0 0 0 3cqw rgba(91,61,245,0)}}
+${base('gh', '5/8')}
+.gh-k{position:absolute;left:8cqw;top:8cqw;font:500 5cqw/1 ${MONO};letter-spacing:.12em;text-transform:uppercase;color:var(--m);display:flex;gap:3cqw;align-items:center}
+.gh-k b{padding:1.6cqw 3cqw;border-radius:99px;background:var(--ac);color:var(--p);font-weight:500;animation:gh-p 2.4s infinite}
+.gh-t{position:absolute;left:8cqw;right:6cqw;top:24cqw;font:400 17cqw/.96 ${SERIF};letter-spacing:-.035em}
+.gh-t em{color:var(--ac);display:block}
+.gh-n{position:absolute;left:8cqw;right:8cqw;top:66cqw;font:500 4.6cqw/1.5 ${MONO};letter-spacing:.02em;color:var(--m);word-break:break-all}
+.gh-n b{display:block;color:var(--i);font-weight:500}
+.gh-l{position:absolute;left:8cqw;right:8cqw;bottom:8cqw;list-style:none;padding:0}
+.gh-l a{position:relative;overflow:hidden;display:flex;justify-content:space-between;padding:4cqw 0;border-top:1px solid var(--l);font:500 5cqw/1 ${MONO};letter-spacing:.06em;text-transform:uppercase;color:var(--m);text-decoration:none;-webkit-tap-highlight-color:transparent;transition:color .2s}
+.gh-l a:hover{color:var(--i)}
+.gh-l a span:last-child{transition:transform .25s}
+.gh-l a:hover span:last-child{transform:translate(1cqw,-1cqw)}
+.gh-l a::after{content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;background:linear-gradient(90deg,transparent,rgba(91,61,245,.14),transparent);animation:gh-s 3.6s ease-in-out infinite;animation-delay:calc(var(--d) * .5s);pointer-events:none}
+@keyframes gh-s{0%,30%{transform:translateX(0)}80%,100%{transform:translateX(480%)}}
+@keyframes gh-p{0%{box-shadow:0 0 0 0 rgba(91,61,245,.5)}70%,100%{box-shadow:0 0 0 3cqw rgba(91,61,245,0)}}
 </style>
-<div class="sk-k">[ links ] <b>soon</b></div>
-<h3 class="sk-t">Find it,<em>soon.</em></h3>
-<ul class="sk-l"><li style="--d:0"><span>GitHub</span><span>↗</span></li><li style="--d:1"><span>Web</span><span>↗</span></li><li style="--d:2"><span>Mail</span><span>↗</span></li></ul>
+<div class="gh-k">[ github ] <b>MIT</b></div>
+<h3 class="gh-t">Get it,<em>on GitHub.</em></h3>
+<p class="gh-n">Prometheo-Studio /<b>kasbu-bento-builder</b></p>
+<div class="gh-l"><a style="--d:0" href="${REPO}" target="_blank" rel="noopener"><span>Repository</span><span>↗</span></a><a style="--d:1" href="${REPO}/blob/main/SKILL.md" target="_blank" rel="noopener"><span>SKILL.md</span><span>↗</span></a><a style="--d:2" href="${REPO}/blob/main/README.md" target="_blank" rel="noopener"><span>README</span><span>↗</span></a></div>
 </div>`);
 
 // ---------- ticker strip (3x1) ----------

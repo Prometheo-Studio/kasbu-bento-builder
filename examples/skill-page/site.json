@@ -42,7 +42,7 @@
         ],
         "LOCATION": "A Claude skill",
         "CTA_LABEL": "Get the skill",
-        "CTA_URL": "#",
+        "CTA_URL": "https://github.com/Prometheo-Studio/kasbu-bento-builder",
         "SEAL_TEXT": "SKILL · KASBU · SKILL · KASBU · "
       }
     },
@@ -82,7 +82,7 @@
         "SUB_1": "Got a Kasbu page?",
         "SUB_2": "Make it move.",
         "BUTTON_LABEL": "Get the skill",
-        "BUTTON_URL": "#"
+        "BUTTON_URL": "https://github.com/Prometheo-Studio/kasbu-bento-builder"
       }
     },
     {

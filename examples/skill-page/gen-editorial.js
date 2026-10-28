@@ -141,7 +141,7 @@ ${base('ct', '5/8')}
 </style>
 <h3 class="ct-t">Your Kasbu,<em>in code.</em></h3>
 <p class="ct-s">Got a Kasbu page? Make it move.</p>
-<a class="ct-b" href="#" target="_blank" rel="noopener">Get the skill <i>→</i></a>
+<a class="ct-b" href="https://github.com/Prometheo-Studio/kasbu-bento-builder" target="_blank" rel="noopener">Get the skill <i>→</i></a>
 </div>`);
 
 // ---------- marquee of templates (3x2 / 4x2) ----------

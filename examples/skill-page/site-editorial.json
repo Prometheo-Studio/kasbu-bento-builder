@@ -1,0 +1,270 @@
+{
+  "site": {
+    "name": "Bento Builder · editorial",
+    "accent": "#5b3df5"
+  },
+  "blocks": [
+    {
+      "id": "stat-templates",
+      "file": "src/stat-templates.html"
+    },
+    {
+      "id": "stat-guides",
+      "file": "src/stat-guides.html"
+    },
+    {
+      "id": "stat-views",
+      "file": "src/stat-views.html"
+    },
+    {
+      "id": "hero",
+      "file": "src/hero.html"
+    },
+    {
+      "id": "views",
+      "file": "src/views.html"
+    },
+    {
+      "id": "cta",
+      "file": "src/cta.html"
+    },
+    {
+      "id": "catalog",
+      "file": "src/catalog.html"
+    },
+    {
+      "id": "manifesto",
+      "file": "src/manifesto.html"
+    },
+    {
+      "id": "soon",
+      "file": "src/soon.html"
+    },
+    {
+      "id": "phase-discover",
+      "file": "src/phase-discover.html"
+    },
+    {
+      "id": "phase-plan",
+      "file": "src/phase-plan.html"
+    },
+    {
+      "id": "phase-build",
+      "file": "src/phase-build.html"
+    },
+    {
+      "id": "phase-preview",
+      "file": "src/phase-preview.html"
+    },
+    {
+      "id": "stat-phases",
+      "file": "src/stat-phases.html"
+    },
+    {
+      "id": "strip",
+      "file": "src/strip.html"
+    }
+  ],
+  "layout": {
+    "desktop": [
+      {
+        "id": "stat-templates",
+        "col": 1,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-guides",
+        "col": 2,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-views",
+        "col": 3,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "hero",
+        "col": 1,
+        "row": 2,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "views",
+        "col": 4,
+        "row": 1,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "cta",
+        "col": 7,
+        "row": 1,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "catalog",
+        "col": 1,
+        "row": 4,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "manifesto",
+        "col": 4,
+        "row": 4,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "soon",
+        "col": 7,
+        "row": 4,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-discover",
+        "col": 1,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-plan",
+        "col": 3,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-build",
+        "col": 5,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-preview",
+        "col": 7,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "strip",
+        "col": 1,
+        "row": 6,
+        "w": 3,
+        "h": 1
+      }
+    ],
+    "mobile": [
+      {
+        "id": "stat-templates",
+        "col": 1,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-guides",
+        "col": 2,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-views",
+        "col": 3,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-phases",
+        "col": 4,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "hero",
+        "col": 1,
+        "row": 2,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "views",
+        "col": 1,
+        "row": 4,
+        "w": 4,
+        "h": 4
+      },
+      {
+        "id": "catalog",
+        "col": 1,
+        "row": 8,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "manifesto",
+        "col": 1,
+        "row": 10,
+        "w": 4,
+        "h": 4
+      },
+      {
+        "id": "cta",
+        "col": 1,
+        "row": 14,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "soon",
+        "col": 3,
+        "row": 14,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-discover",
+        "col": 1,
+        "row": 17,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-plan",
+        "col": 3,
+        "row": 17,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-build",
+        "col": 1,
+        "row": 20,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "phase-preview",
+        "col": 3,
+        "row": 20,
+        "w": 2,
+        "h": 3
+      }
+    ]
+  }
+}

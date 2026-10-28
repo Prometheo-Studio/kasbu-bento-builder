@@ -1,0 +1,702 @@
+{
+  "site": {
+    "name": "Alex Rivera · demo",
+    "accent": "#12b5a6"
+  },
+  "blocks": [
+    {
+      "id": "stat-projects",
+      "template": "stat-counter",
+      "data": {
+        "NUMBER": 40,
+        "LABEL": "projects"
+      }
+    },
+    {
+      "id": "stat-clients",
+      "template": "stat-counter",
+      "data": {
+        "NUMBER": 30,
+        "LABEL": "clients"
+      }
+    },
+    {
+      "id": "stat-years",
+      "template": "stat-counter",
+      "data": {
+        "NUMBER": 10,
+        "LABEL": "years"
+      }
+    },
+    {
+      "id": "profile",
+      "template": "profile-card",
+      "data": {
+        "NAME": "Alex Rivera",
+        "ROLES": [
+          "Entrepreneur",
+          "Product designer",
+          "AI builder",
+          "Speaker"
+        ],
+        "LOCATION": "Monterrey, MX",
+        "CTA_LABEL": "Contact me",
+        "CTA_URL": "https://wa.me/5210000000000"
+      }
+    },
+    {
+      "id": "about",
+      "template": "about-photo",
+      "data": {
+        "NAME_FIRST": "Alex",
+        "NAME_LAST": "Rivera",
+        "ROLE": "Web & product designer",
+        "FACTS": [
+          "10+ years designing digital products",
+          "Master's in design, Universidad de Ejemplo",
+          "Member of a founders community",
+          "Exploring AI-assisted development"
+        ],
+        "CHIPS": [
+          {
+            "text": "Studio",
+            "color": "#7aa2ff"
+          },
+          {
+            "text": "SaaS",
+            "color": "#a78bff"
+          },
+          {
+            "text": "Lab",
+            "color": "#ff5a36"
+          }
+        ]
+      }
+    },
+    {
+      "id": "event",
+      "template": "event-badge",
+      "data": {
+        "YEAR": "2026",
+        "EVENT_1": "Founders",
+        "EVENT_2": "Summit",
+        "NAME_1": "Alex",
+        "NAME_2": "Rivera",
+        "COMPANY": "Rivera Studio",
+        "ROLE_LABEL": "SPEAKER",
+        "ORG_LINE": "Example University · Monterrey",
+        "FOOT_LABEL": "Speaker"
+      }
+    },
+    {
+      "id": "roles",
+      "template": "role-pills",
+      "data": {
+        "HEADLINE_1": "Designer who now",
+        "HEADLINE_PRE": "builds",
+        "HEADLINE_2": "businesses",
+        "ROWS": [
+          [
+            {
+              "text": "Product Designer",
+              "icon": "pen"
+            },
+            {
+              "text": "Entrepreneur",
+              "icon": "puzzle",
+              "lit": 0
+            },
+            {
+              "text": "AI Builder",
+              "icon": "spark",
+              "lit": 6
+            }
+          ],
+          [
+            {
+              "text": "Web Designer",
+              "icon": "win"
+            },
+            {
+              "text": "Speaker",
+              "icon": "mega",
+              "lit": 3
+            },
+            {
+              "text": "Founder",
+              "icon": "bulb"
+            }
+          ],
+          [
+            {
+              "text": "Branding",
+              "icon": "layers"
+            },
+            {
+              "text": "Marketing",
+              "icon": "target",
+              "lit": 9
+            },
+            {
+              "text": "Automation",
+              "icon": "route"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "id": "socials",
+      "template": "social-orbit",
+      "data": {
+        "SOON": false,
+        "HEADLINE_1": "Find me,",
+        "HEADLINE_2": "everywhere.",
+        "SUB": "Pick a network and say hi.",
+        "BUTTON_LABEL": "Write me",
+        "BUTTON_URL": "https://wa.me/5210000000000",
+        "NETWORKS": [
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/example",
+            "icon": "linkedin"
+          },
+          {
+            "name": "Instagram",
+            "url": "https://instagram.com/example",
+            "icon": "instagram"
+          },
+          {
+            "name": "X",
+            "url": "https://x.com/example",
+            "icon": "x"
+          },
+          {
+            "name": "YouTube",
+            "url": "https://youtube.com/@example",
+            "icon": "youtube"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/example",
+            "icon": "github"
+          }
+        ]
+      }
+    },
+    {
+      "id": "logos",
+      "template": "logo-marquee",
+      "data": {
+        "LABEL": "work",
+        "HEADLINE": "Brands that already lit their",
+        "HEADLINE_EM": "spark",
+        "SUBLINE": "Branding, web, marketing and AI.",
+        "LOGOS": [
+          {
+            "name": "Acme",
+            "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><text x='0' y='30' font-family='Arial' font-size='30' font-weight='700' fill='black'>ACME</text></svg>"
+          },
+          {
+            "name": "Globex",
+            "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><text x='0' y='30' font-family='Georgia' font-size='30' font-style='italic' fill='black'>Globex</text></svg>"
+          },
+          {
+            "name": "Initech",
+            "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><text x='0' y='30' font-family='Courier New' font-size='28' font-weight='700' fill='black'>initech</text></svg>"
+          },
+          {
+            "name": "Umbrella",
+            "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><text x='0' y='30' font-family='Verdana' font-size='26' fill='black'>UMBRELLA</text></svg>"
+          },
+          {
+            "name": "Hooli",
+            "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><text x='0' y='30' font-family='Trebuchet MS' font-size='32' font-weight='700' fill='black'>hooli</text></svg>"
+          },
+          {
+            "name": "Stark",
+            "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><text x='0' y='30' font-family='Impact' font-size='30' fill='black'>STARK</text></svg>"
+          }
+        ]
+      }
+    },
+    {
+      "id": "biz-light",
+      "template": "business-tile",
+      "data": {
+        "THEME": "light",
+        "LOGO_TEXT": "Rivera Studio",
+        "TAG": "my agency",
+        "HEADLINE_1": "Make the next",
+        "HEADLINE_2": "move.",
+        "SUB": "Design, marketing and AI working together to scale your business.",
+        "CHIPS": [
+          "AI",
+          "Web design",
+          "Design",
+          "Marketing"
+        ],
+        "MARQUEE": [
+          "Acme",
+          "Globex",
+          "Initech",
+          "Umbrella",
+          "Hooli"
+        ],
+        "URL": "https://example.com"
+      }
+    },
+    {
+      "id": "biz-dark",
+      "template": "business-tile",
+      "data": {
+        "THEME": "dark",
+        "LOGO_TEXT": "Lab",
+        "TAG": "my product",
+        "HEADLINE_1": "Resources",
+        "HEADLINE_2": "you can trust.",
+        "SUB": "A library of tested prompts, skills and agents.",
+        "CHIPS": [
+          "Prompts",
+          "Guides",
+          "Skills",
+          "Agents"
+        ],
+        "MARQUEE": [
+          "Claude",
+          "ChatGPT",
+          "Gemini",
+          "DeepSeek"
+        ],
+        "URL": "https://example.com",
+        "ACCENT": "#a78bff"
+      }
+    },
+    {
+      "id": "cta",
+      "template": "cta-pulse",
+      "data": {
+        "HEADLINE_1": "Your whole business,",
+        "HEADLINE_2": "in sync.",
+        "SUB_1": "Got loose pieces?",
+        "SUB_2": "Let's talk.",
+        "BUTTON_LABEL": "Let's talk",
+        "BUTTON_URL": "https://wa.me/5210000000000"
+      }
+    },
+    {
+      "id": "proj-1",
+      "template": "project-card",
+      "data": {
+        "NAME": "Northwind",
+        "INDEX": "01",
+        "TAGS": [
+          "Web app",
+          "SaaS"
+        ],
+        "ACCENT": "#3d7bff"
+      }
+    },
+    {
+      "id": "proj-2",
+      "template": "project-card",
+      "data": {
+        "NAME": "Contoso",
+        "INDEX": "02",
+        "TAGS": [
+          "Branding"
+        ],
+        "ACCENT": "#d9a866"
+      }
+    },
+    {
+      "id": "proj-3",
+      "template": "project-card",
+      "data": {
+        "NAME": "Fabrikam",
+        "INDEX": "03",
+        "TAGS": [
+          "Website",
+          "CMS"
+        ],
+        "ACCENT": "#36c5ff"
+      }
+    },
+    {
+      "id": "proj-4",
+      "template": "project-card",
+      "data": {
+        "NAME": "Tailspin",
+        "INDEX": "04",
+        "TAGS": [
+          "Mobile app"
+        ],
+        "ACCENT": "#9b7bff"
+      }
+    },
+    {
+      "id": "clients",
+      "template": "testimonials-banner",
+      "data": {
+        "TAG_LABEL": "clients",
+        "QUOTES": [
+          {
+            "text": "Since launch, our sales grew 40% in the first year.",
+            "name": "Sam Lee",
+            "role": "Founder",
+            "company": "Northwind",
+            "tag": "Website and catalog"
+          },
+          {
+            "text": "Working with Alex felt like having a true partner in the process.",
+            "name": "Priya Nair",
+            "role": "Founder",
+            "company": "Contoso",
+            "tag": "Digital product"
+          },
+          {
+            "text": "A platform that looks great and works flawlessly.",
+            "name": "Marco Ruiz",
+            "role": "Co-founder",
+            "company": "Fabrikam",
+            "tag": "Platform"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quote",
+      "template": "quote-card",
+      "data": {
+        "QUOTE": "A platform that looks great and works flawlessly.",
+        "NAME": "Marco Ruiz",
+        "ROLE": "Co-founder",
+        "COMPANY": "Fabrikam"
+      }
+    },
+    {
+      "id": "timeline",
+      "template": "timeline-card",
+      "data": {
+        "TAG": "path",
+        "TITLE": "How I got here",
+        "ITEMS": [
+          {
+            "year": "2014",
+            "text": "First freelance projects"
+          },
+          {
+            "year": "2018",
+            "text": "Opened my own studio"
+          },
+          {
+            "year": "2022",
+            "text": "Started building products"
+          },
+          {
+            "year": "2025",
+            "text": "Teaching and speaking"
+          }
+        ]
+      }
+    },
+    {
+      "id": "links",
+      "template": "link-list",
+      "data": {
+        "TAG": "links",
+        "LINKS": [
+          {
+            "label": "Book a call",
+            "hint": "30 min · free",
+            "url": "https://example.com/call"
+          },
+          {
+            "label": "Newsletter",
+            "hint": "Monthly notes",
+            "url": "https://example.com/news"
+          },
+          {
+            "label": "Portfolio PDF",
+            "hint": "2026 edition",
+            "url": "https://example.com/pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "status",
+      "template": "status-tile",
+      "data": {
+        "STATUS": "Open to projects",
+        "SUB": "Next slot: June",
+        "URL": "https://example.com/call"
+      }
+    }
+  ],
+  "layout": {
+    "desktop": [
+      {
+        "id": "stat-projects",
+        "col": 1,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-clients",
+        "col": 2,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-years",
+        "col": 3,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "profile",
+        "col": 1,
+        "row": 2,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "about",
+        "col": 4,
+        "row": 1,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "event",
+        "col": 7,
+        "row": 1,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "native": "Email",
+        "col": 1,
+        "row": 4,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "native": "WhatsApp",
+        "col": 2,
+        "row": 4,
+        "w": 2,
+        "h": 1
+      },
+      {
+        "id": "roles",
+        "col": 1,
+        "row": 5,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "socials",
+        "col": 4,
+        "row": 4,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "logos",
+        "col": 6,
+        "row": 4,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "biz-light",
+        "col": 1,
+        "row": 7,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "biz-dark",
+        "col": 4,
+        "row": 7,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "cta",
+        "col": 7,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "proj-1",
+        "col": 1,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "proj-2",
+        "col": 3,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "proj-3",
+        "col": 5,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "proj-4",
+        "col": 7,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "clients",
+        "col": 1,
+        "row": 13,
+        "w": 8,
+        "h": 2
+      },
+      {
+        "id": "timeline",
+        "col": 1,
+        "row": 15,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "quote",
+        "col": 4,
+        "row": 15,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "links",
+        "col": 4,
+        "row": 17,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "status",
+        "col": 7,
+        "row": 15,
+        "w": 2,
+        "h": 1
+      }
+    ],
+    "mobile": [
+      {
+        "id": "stat-projects",
+        "col": 1,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-clients",
+        "col": 2,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "stat-years",
+        "col": 3,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "native": "Email",
+        "col": 4,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "profile",
+        "col": 1,
+        "row": 2,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "about",
+        "col": 1,
+        "row": 4,
+        "w": 4,
+        "h": 4
+      },
+      {
+        "id": "roles",
+        "col": 1,
+        "row": 8,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "event",
+        "col": 1,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "cta",
+        "col": 3,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "clients",
+        "col": 1,
+        "row": 13,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "status",
+        "col": 1,
+        "row": 15,
+        "w": 2,
+        "h": 1
+      },
+      {
+        "id": "timeline",
+        "col": 1,
+        "row": 16,
+        "w": 4,
+        "h": 4
+      },
+      {
+        "id": "quote",
+        "col": 1,
+        "row": 20,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "links",
+        "col": 1,
+        "row": 22,
+        "w": 4,
+        "h": 2
+      }
+    ]
+  }
+}

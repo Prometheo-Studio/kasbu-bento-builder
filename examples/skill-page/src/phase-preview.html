@@ -1,0 +1,30 @@
+<!-- Block: editorial phase card · 2×3 -->
+<div class="pd" role="group" aria-label="Phase 04: Preview">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;background:#f3eee4}
+.pd{--p:#f3eee4;--i:#16140f;--ac:#5b3df5;--m:rgba(22,20,15,.56);--l:rgba(22,20,15,.16);container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:5/8;overflow:hidden;isolation:isolate;border-radius:inherit;background:#f3eee4;color:#16140f;font-family:'Inter',system-ui,sans-serif}
+.pd *{box-sizing:border-box;margin:0}
+.pd::after{content:"";position:absolute;inset:-25%;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .04 0 0 0 0 .04 0 0 0 0 .05 2.5 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px;animation:pd-gr .9s steps(1) infinite}
+@keyframes pd-gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+@media (prefers-reduced-motion:reduce){.pd *,.pd::after{animation:none!important}}
+.pd-k{position:absolute;left:8cqw;right:8cqw;top:8cqw;display:flex;justify-content:space-between;font:500 5.2cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--m)}
+.pd-n{position:absolute;left:6cqw;top:20cqw;font:400 52cqw/.9 'Instrument Serif',Georgia,serif;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:.5cqw var(--i);animation:pd-lit 8s infinite;animation-delay:6s}
+.pd-t{position:absolute;left:8cqw;right:6cqw;top:80cqw;font:400 14cqw/1 'Instrument Serif',Georgia,serif;letter-spacing:-.03em}
+.pd-d{position:absolute;left:8cqw;right:8cqw;top:98cqw;font:400 5.3cqw/1.45 'Inter',system-ui,sans-serif;color:var(--m)}
+.pd-g{position:absolute;left:8cqw;right:8cqw;bottom:8cqw;display:flex;gap:2.4cqw}
+.pd-g span{padding:2cqw 3.6cqw;border:1px solid var(--l);border-radius:99px;font:500 4.2cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase}
+.pd-b{position:absolute;left:8cqw;right:8cqw;bottom:22cqw;height:.8cqw;background:var(--l);overflow:hidden}
+.pd-b i{position:absolute;inset:0;background:var(--ac);transform-origin:0 50%;transform:scaleX(0);animation:pd-bar 8s infinite;animation-delay:6s}
+@keyframes pd-lit{0%,22%{color:var(--ac);-webkit-text-stroke-color:var(--ac)}26%,100%{color:transparent;-webkit-text-stroke-color:#16140f}}
+@keyframes pd-bar{0%{transform:scaleX(0)}22%{transform:scaleX(1)}26%,100%{transform:scaleX(0)}}
+@media (prefers-reduced-motion:reduce){.pd-b i{transform:scaleX(1)}}
+</style>
+<div class="pd-k"><span>phase</span><span>04 / 04</span></div>
+<div class="pd-n" aria-hidden="true">04</div>
+<h3 class="pd-t">Preview</h3>
+<p class="pd-d">See both views side by side, then copy the code block by block.</p>
+<div class="pd-b" aria-hidden="true"><i></i></div>
+<div class="pd-g"><span>Browser</span><span>Artifact</span></div>
+</div>

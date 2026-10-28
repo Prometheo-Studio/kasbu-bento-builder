@@ -1,0 +1,64 @@
+<!-- Block: role-pills · dark wide card · desktop 3×2 (~307×193) · mobile 4×2 (~350×167, only the first 2 rows show)
+     Rows of role pills that sway, one pill lights up in the accent color, plus a headline.
+     data: ROWS (array of rows; each row = [{text, icon, lit}]; lit = seconds delay 0/3/6/9 to light that pill), HEADLINE_1, HEADLINE_2 (the highlighted word), ACCENT
+     icons: pen puzzle spark win mega bulb layers target route code chart globe -->
+<div class="qs" role="group" aria-label="{{HEADLINE_1|Designer who now}} {{HEADLINE_2|builds businesses}}" style="{{RAW_ACCENT_VARS}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+{{> page-bg qs}}
+.qs{container-type:inline-size;display:block;width:100%;border-radius:inherit;background:#0b0b0d;color:#f4f1ec;font-family:'Inter',system-ui,sans-serif}
+.qs-in{position:relative;width:100%;aspect-ratio:307/193;overflow:hidden;isolation:isolate;border-radius:inherit;background:#0b0b0d}
+{{> noise qs-in}}
+.qs *{box-sizing:border-box;margin:0}
+.qs-glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 60% at 50% 0%,rgba(var(--a-rgb),.2),transparent 70%),radial-gradient(60% 45% at 50% 105%,rgba(255,255,255,.06),transparent 70%);animation:qs-gl 6s ease-in-out infinite}
+.qs-rows{position:absolute;left:0;right:0;top:6cqw;display:flex;flex-direction:column;gap:2.4cqw;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 20%,#000 80%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 20%,#000 80%,transparent 100%)}
+.qs-row{display:flex;gap:2.4cqw;width:max-content;position:relative;left:50%;transform:translateX(-50%);animation:qs-dr 14s ease-in-out infinite alternate}
+.qs-row:nth-child(2){animation-duration:17s;animation-direction:alternate-reverse}
+.qs-row:nth-child(3){animation-duration:15s}
+.qs-p{display:inline-flex;align-items:center;gap:1.8cqw;height:9.6cqw;padding:0 3.6cqw 0 3cqw;border-radius:99px;white-space:nowrap;font:500 3.8cqw/1 'Inter',system-ui,sans-serif;color:#8d8d93;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.11);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);transition:color .35s,border-color .35s}
+.qs-p svg{width:4cqw;height:4cqw;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.qs-p:hover{color:#fff;border-color:rgba(255,255,255,.32)}
+.qs-p.hl{animation:qs-hl 12s infinite;animation-delay:calc(var(--d) * 1s)}
+.qs-txt{position:absolute;left:6.5cqw;right:6.5cqw;bottom:5.5cqw;text-align:center}
+.qs-h{font:700 6.1cqw/1.06 'Inter',system-ui,sans-serif;letter-spacing:-.03em}
+.qs-h em{font-style:normal;background:linear-gradient(90deg,#f4f1ec,var(--a-lt));-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes qs-dr{from{transform:translateX(calc(-50% - 4cqw))}to{transform:translateX(calc(-50% + 4cqw))}}
+@keyframes qs-hl{0%,22%{color:#fff;background:radial-gradient(120% 160% at 30% 0%,var(--a),var(--a-dk));border-color:rgba(255,255,255,.35);box-shadow:0 0 3cqw rgba(var(--a-rgb),.4),inset 0 1px 0 rgba(255,255,255,.25)}26%,100%{color:#8d8d93;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border-color:rgba(255,255,255,.11);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}}
+@keyframes qs-gl{0%,100%{opacity:.65}50%{opacity:1}}
+/* mobile: slot of 315px or more. 4×2 is shorter, so only 2 rows, bigger type */
+@container (min-width: 315px){
+  .qs-in{aspect-ratio:21/10}
+  .qs-rows{top:4.4cqw;gap:2.2cqw}
+  .qs-row{gap:2.2cqw}
+  .qs-row:nth-child(n+3){display:none}
+  .qs-p{height:9.6cqw;padding:0 4cqw 0 3.4cqw;gap:2cqw;font-size:4.2cqw}
+  .qs-p svg{width:4.4cqw;height:4.4cqw}
+  .qs-txt{left:5cqw;right:5cqw;bottom:4.2cqw}
+  .qs-h{font-size:6.8cqw;line-height:1.06}
+}
+@media (prefers-reduced-motion:reduce){.qs *,.qs-in::after{animation:none!important}.qs-p.hl{color:#fff;background:radial-gradient(120% 160% at 30% 0%,var(--a),var(--a-dk))}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="qs-puzzle" viewBox="0 0 24 24"><path d="M15.4 7.5V5.2a2 2 0 0 0-4 0v2.3H4v6.3h2.3a2 2 0 0 1 0 4H4V22h16v-6.3h-2.3a2 2 0 0 1 0-4H20V7.5z"/></symbol>
+<symbol id="qs-spark" viewBox="0 0 24 24"><path d="M9.9 15.5A2 2 0 0 0 8.5 14l-6.1-1.6a.5.5 0 0 1 0-1L8.5 9.9A2 2 0 0 0 9.9 8.5l1.6-6.1a.5.5 0 0 1 1 0L14 8.5a2 2 0 0 0 1.4 1.4l6.1 1.6a.5.5 0 0 1 0 1L15.5 14a2 2 0 0 0-1.4 1.4l-1.6 6.1a.5.5 0 0 1-1 0z"/></symbol>
+<symbol id="qs-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.4 3.6a2.1 2.1 0 0 1 3 3L7.4 18.6l-4 1 1-4z"/></symbol>
+<symbol id="qs-win" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h.01M9 6.5h.01"/></symbol>
+<symbol id="qs-mega" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14zM11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+<symbol id="qs-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4"/></symbol>
+<symbol id="qs-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></symbol>
+<symbol id="qs-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="qs-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/></symbol>
+<symbol id="qs-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+<symbol id="qs-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M19 9l-5 5-4-4-3 3"/></symbol>
+<symbol id="qs-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></symbol>
+</defs></svg>
+<div class="qs-in">
+  <i class="qs-glow" aria-hidden="true"></i>
+  <div class="qs-rows" aria-hidden="true">
+{{#each PILL_ROWS}}    <div class="qs-row">{{#each .items}}<span class="qs-p{{#if .hasLit}} hl{{/if}}"{{#if .hasLit}} style="--d:{{.lit}}"{{/if}}><svg><use href="#qs-{{.icon|spark}}"/></svg>{{.text}}</span>{{/each}}</div>
+{{/each}}  </div>
+  <div class="qs-txt">
+    <h3 class="qs-h">{{HEADLINE_1|Designer who now}}<br>{{HEADLINE_PRE|builds}} <em>{{HEADLINE_2|businesses}}</em>.</h3>
+  </div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<!-- Block: editorial hero · desktop 3×2 · phone 4×2 (switches at slot width ≥ 315px) -->
+<div class="hx" role="group" aria-label="Bento Builder, a Claude skill for Kasbu">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;background:#f3eee4}
+.hx{--p:#f3eee4;--i:#16140f;--ac:#5b3df5;--m:rgba(22,20,15,.56);--l:rgba(22,20,15,.16);container-type:inline-size;display:block;width:100%;border-radius:inherit;background:#f3eee4;color:#16140f;font-family:'Inter',system-ui,sans-serif}
+.hx *{box-sizing:border-box;margin:0}
+.hx-in{position:relative;width:100%;aspect-ratio:307/193;overflow:hidden;isolation:isolate;border-radius:inherit}
+.hx-in::after{content:"";position:absolute;inset:-25%;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .04 0 0 0 0 .04 0 0 0 0 .05 2.5 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px;animation:hx-in-gr .9s steps(1) infinite}
+@keyframes hx-in-gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+.hx-tag{position:absolute;left:6cqw;top:6cqw;font:500 3.3cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--m);display:flex;align-items:center;gap:2cqw}
+.hx-tag b{width:2.2cqw;height:2.2cqw;border-radius:50%;background:var(--ac);animation:hx-pu 2.4s infinite}
+.hx-t{position:absolute;left:6cqw;top:17cqw;font:400 17cqw/.92 'Instrument Serif',Georgia,serif;letter-spacing:-.035em;animation:hx-up .9s cubic-bezier(.2,.8,.2,1) both}
+.hx-t span{display:block}.hx-t em{color:var(--ac)}
+.hx-v{position:absolute;left:6cqw;right:6cqw;bottom:6cqw;display:flex;justify-content:space-between;border-top:1px solid var(--l);padding-top:3cqw;font:500 3.6cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase}
+.hx-v span{opacity:.35;background:linear-gradient(var(--ac),var(--ac)) 0 100%/0 .5cqw no-repeat;padding-bottom:1cqw;animation:hx-l 8s infinite}
+.hx-v span:nth-child(2){animation-delay:2s}.hx-v span:nth-child(3){animation-delay:4s}.hx-v span:nth-child(4){animation-delay:6s}
+@keyframes hx-l{0%,22%{opacity:1;background-size:100% .5cqw}26%,100%{opacity:.35;background-size:0 .5cqw}}
+@keyframes hx-pu{0%{box-shadow:0 0 0 0 rgba(91,61,245,.55)}70%,100%{box-shadow:0 0 0 2.6cqw rgba(91,61,245,0)}}
+@keyframes hx-up{0%{opacity:0;transform:translateY(3cqw)}100%{opacity:1;transform:translateY(0)}}
+@container (min-width:315px){
+.hx-in{aspect-ratio:21/10}
+.hx-tag{font-size:3.2cqw;left:5cqw;top:5cqw}
+.hx-t{font-size:13cqw;top:14cqw;left:5cqw;white-space:nowrap}
+.hx-t span{display:inline}
+.hx-v{left:5cqw;right:5cqw;bottom:5cqw;font-size:3.1cqw}
+}
+@media (prefers-reduced-motion:reduce){.hx *,.hx-in::after{animation:none!important}.hx-v span:first-child{opacity:1;background-size:100% .5cqw}}
+</style>
+<div class="hx-in">
+<div class="hx-tag"><b></b>claude skill · for kasbu</div>
+<h3 class="hx-t"><span>Bento</span> <span><em>Builder</em></span></h3>
+<div class="hx-v" aria-hidden="true"><span>Interviews</span><span>Plans</span><span>Builds</span><span>Previews</span></div>
+</div>
+</div>

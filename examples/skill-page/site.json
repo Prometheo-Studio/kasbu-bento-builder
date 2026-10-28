@@ -1,0 +1,433 @@
+{
+  "site": {
+    "name": "Kasbu Bento Builder",
+    "accent": "#7c5cff"
+  },
+  "blocks": [
+    {
+      "id": "st-tpl",
+      "template": "stat-counter",
+      "data": {
+        "NUMBER": 11,
+        "LABEL": "templates"
+      }
+    },
+    {
+      "id": "st-guides",
+      "template": "stat-counter",
+      "data": {
+        "NUMBER": 8,
+        "LABEL": "guides"
+      }
+    },
+    {
+      "id": "st-views",
+      "template": "stat-counter",
+      "data": {
+        "NUMBER": 2,
+        "LABEL": "views"
+      }
+    },
+    {
+      "id": "profile",
+      "template": "profile-card",
+      "data": {
+        "NAME": "Bento Builder",
+        "INITIALS": "BB",
+        "ROLES": [
+          "Interviews you",
+          "Plans the grid",
+          "Builds blocks",
+          "Previews both views"
+        ],
+        "LOCATION": "A Claude skill",
+        "CTA_LABEL": "Get the skill",
+        "CTA_URL": "#",
+        "SEAL_TEXT": "SKILL · KASBU · SKILL · KASBU · "
+      }
+    },
+    {
+      "id": "biz-dark",
+      "template": "business-tile",
+      "data": {
+        "THEME": "dark",
+        "LOGO_TEXT": "bento-builder",
+        "TAG": "claude skill",
+        "HEADLINE_1": "Describe it.",
+        "HEADLINE_2": "Claude builds it.",
+        "SUB": "Animated, responsive Kasbu blocks from a short interview.",
+        "CHIPS": [
+          "Animated",
+          "Responsive",
+          "Preview",
+          "Lint"
+        ],
+        "MARQUEE": [
+          "Stat counters",
+          "Typed roles",
+          "Social orbit",
+          "Logo marquee",
+          "Testimonials",
+          "Event badge",
+          "CTA pulse"
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "template": "cta-pulse",
+      "data": {
+        "HEADLINE_1": "Your Kasbu,",
+        "HEADLINE_2": "in code.",
+        "SUB_1": "Got a Kasbu page?",
+        "SUB_2": "Make it move.",
+        "BUTTON_LABEL": "Get the skill",
+        "BUTTON_URL": "#"
+      }
+    },
+    {
+      "id": "roles",
+      "template": "role-pills",
+      "data": {
+        "HEADLINE_1": "One skill,",
+        "HEADLINE_PRE": "every",
+        "HEADLINE_2": "block",
+        "ROWS": [
+          [
+            {
+              "text": "Interview",
+              "icon": "bulb"
+            },
+            {
+              "text": "Grid plan",
+              "icon": "layers",
+              "lit": 0
+            },
+            {
+              "text": "Animations",
+              "icon": "spark",
+              "lit": 6
+            }
+          ],
+          [
+            {
+              "text": "Responsive",
+              "icon": "win"
+            },
+            {
+              "text": "Preview",
+              "icon": "target",
+              "lit": 3
+            },
+            {
+              "text": "Lint",
+              "icon": "puzzle"
+            }
+          ],
+          [
+            {
+              "text": "Desktop",
+              "icon": "pen"
+            },
+            {
+              "text": "Phone",
+              "icon": "mega",
+              "lit": 9
+            },
+            {
+              "text": "Delivery",
+              "icon": "route"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "id": "socials",
+      "template": "social-orbit",
+      "data": {
+        "SOON": true,
+        "HEADLINE_1": "Find it,",
+        "HEADLINE_2": "soon.",
+        "SUB": "Links coming with the release.",
+        "BUTTON_LABEL": "Say hi",
+        "BUTTON_URL": "#",
+        "NETWORKS": [
+          {
+            "name": "GitHub",
+            "url": "",
+            "icon": "github"
+          },
+          {
+            "name": "Web",
+            "url": "",
+            "icon": "globe"
+          },
+          {
+            "name": "Mail",
+            "url": "",
+            "icon": "mail"
+          }
+        ]
+      }
+    },
+    {
+      "id": "biz-light",
+      "template": "business-tile",
+      "data": {
+        "THEME": "light",
+        "LOGO_TEXT": "kasbu",
+        "TAG": "your page",
+        "HEADLINE_1": "Your page,",
+        "HEADLINE_2": "in motion.",
+        "SUB": "Paste-ready blocks for desktop and phone.",
+        "CHIPS": [
+          "Desktop",
+          "Phone",
+          "Dark",
+          "Light"
+        ],
+        "MARQUEE": [
+          "8 columns",
+          "4 columns",
+          "78 px",
+          "cqw"
+        ],
+        "URL": "https://kasbu.bio"
+      }
+    },
+    {
+      "id": "ph-1",
+      "template": "project-card",
+      "data": {
+        "NAME": "Discover",
+        "INDEX": "01",
+        "TAGS": [
+          "Interview",
+          "Your sites"
+        ],
+        "ACCENT": "#7c5cff"
+      }
+    },
+    {
+      "id": "ph-2",
+      "template": "project-card",
+      "data": {
+        "NAME": "Plan",
+        "INDEX": "02",
+        "TAGS": [
+          "Grid",
+          "Sizes"
+        ],
+        "ACCENT": "#36c5ff"
+      }
+    },
+    {
+      "id": "ph-3",
+      "template": "project-card",
+      "data": {
+        "NAME": "Build",
+        "INDEX": "03",
+        "TAGS": [
+          "Templates",
+          "Lint"
+        ],
+        "ACCENT": "#ff5a36"
+      }
+    },
+    {
+      "id": "ph-4",
+      "template": "project-card",
+      "data": {
+        "NAME": "Preview",
+        "INDEX": "04",
+        "TAGS": [
+          "Desktop",
+          "Phone"
+        ],
+        "ACCENT": "#12b5a6"
+      }
+    }
+  ],
+  "layout": {
+    "desktop": [
+      {
+        "id": "st-tpl",
+        "col": 1,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "st-guides",
+        "col": 2,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "st-views",
+        "col": 3,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "profile",
+        "col": 1,
+        "row": 2,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "biz-dark",
+        "col": 4,
+        "row": 1,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "cta",
+        "col": 7,
+        "row": 1,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "roles",
+        "col": 1,
+        "row": 4,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "id": "socials",
+        "col": 4,
+        "row": 4,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "biz-light",
+        "col": 6,
+        "row": 4,
+        "w": 3,
+        "h": 3
+      },
+      {
+        "id": "ph-1",
+        "col": 1,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-2",
+        "col": 3,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-3",
+        "col": 5,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-4",
+        "col": 7,
+        "row": 7,
+        "w": 2,
+        "h": 3
+      }
+    ],
+    "mobile": [
+      {
+        "id": "st-tpl",
+        "col": 1,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "st-guides",
+        "col": 2,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "st-views",
+        "col": 3,
+        "row": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "profile",
+        "col": 1,
+        "row": 2,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "biz-dark",
+        "col": 1,
+        "row": 4,
+        "w": 4,
+        "h": 4
+      },
+      {
+        "id": "roles",
+        "col": 1,
+        "row": 8,
+        "w": 4,
+        "h": 2
+      },
+      {
+        "id": "cta",
+        "col": 1,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "socials",
+        "col": 3,
+        "row": 10,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-1",
+        "col": 1,
+        "row": 13,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-2",
+        "col": 3,
+        "row": 13,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-3",
+        "col": 1,
+        "row": 16,
+        "w": 2,
+        "h": 3
+      },
+      {
+        "id": "ph-4",
+        "col": 3,
+        "row": 16,
+        "w": 2,
+        "h": 3
+      }
+    ]
+  }
+}

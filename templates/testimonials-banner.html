@@ -1,0 +1,67 @@
+<!-- Block: testimonials-banner · wide banner · desktop 8×2 (~879×192) · mobile 4×2 (~350×167)
+     Quotes rotate every 4s with a progress bar. Desktop shows client chips on the right; mobile shows round avatars at the top-right,
+     the quote anchored bottom-left next to a vertical progress bar. Switches by slot width (< 640px = mobile).
+     data: QUOTES ([{text, name, role, company, tag, initials?}]) — use 2 to 5 quotes. TAG_LABEL, ACCENT -->
+<div class="cl" role="group" aria-label="{{TAG_LABEL|clients}}" style="{{RAW_ACCENT_VARS}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+{{> page-bg cl}}
+.cl{container-type:inline-size;display:block;width:100%;border-radius:inherit;background:#0b0b0d;color:#f4f1ec;font-family:'Inter',system-ui,sans-serif}
+.cl-in{position:relative;width:100%;aspect-ratio:879/192;overflow:hidden;isolation:isolate;border-radius:inherit;background:#0b0b0d}
+{{> noise cl-in}}
+.cl *{box-sizing:border-box;margin:0}
+.cl-glow{position:absolute;left:-6cqw;top:-14cqw;width:50cqw;height:50cqw;z-index:-1;background:radial-gradient(closest-side,rgba(var(--a-rgb),.32),transparent);animation:cl-gl 5s ease-in-out infinite}
+.cl-qm{position:absolute;left:3.4cqw;top:.4cqw;font:400 17cqw/1 Georgia,'Times New Roman',serif;color:rgba(var(--a-rgb),.3);pointer-events:none}
+.cl-main{position:absolute;left:11cqw;top:2.6cqw;width:56cqw;bottom:2.6cqw}
+.cl-tag{display:block;font:500 1.25cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.05em;color:rgba(244,241,236,.55)}
+.cl-qs{position:relative;margin-top:2cqw;height:12.6cqw}
+.cl-q{position:absolute;left:0;top:0;right:0;opacity:0;animation:cl-q {{CYCLE}}s infinite;animation-delay:calc(var(--d) * 1s)}
+.cl-q blockquote{font:500 2.35cqw/1.28 'Inter',system-ui,sans-serif;letter-spacing:-.012em;color:#f4f1ec}
+.cl-q figcaption{margin-top:1.5cqw;font:400 1.3cqw/1.2 'Inter',system-ui,sans-serif;color:rgba(244,241,236,.6)}
+.cl-q figcaption b{font-weight:600;color:#f4f1ec}
+.cl-bar{position:absolute;left:11cqw;bottom:2.4cqw;width:56cqw;height:.3cqw;background:rgba(255,255,255,.1);overflow:hidden}
+.cl-bar::after{content:"";position:absolute;inset:0;background:var(--a);transform-origin:0 50%;animation:cl-bar 4s linear infinite}
+.cl-side{position:absolute;right:3.2cqw;top:2.6cqw;bottom:2.6cqw;width:27cqw;display:flex;flex-direction:column;gap:1cqw}
+.cl-c{flex:1;display:flex;align-items:center;gap:1.5cqw;padding:0 1.6cqw;border-radius:1.6cqw;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);animation:cl-act {{CYCLE}}s infinite;animation-delay:calc(var(--d) * 1s)}
+.cl-c u{text-decoration:none;flex:none;width:3.8cqw;height:3.8cqw;border-radius:50%;display:grid;place-items:center;font:700 1.3cqw/1 'Inter',system-ui,sans-serif;color:#fff;background:linear-gradient(135deg,var(--a),var(--a-dk))}
+.cl-c b{display:block;font:600 1.6cqw/1.15 'Inter',system-ui,sans-serif}
+.cl-c em{display:block;font:400 1.2cqw/1.2 'Inter',system-ui,sans-serif;font-style:normal;color:rgba(244,241,236,.6)}
+.cl-dots{display:none}
+@keyframes cl-bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes cl-barv{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes cl-gl{0%,100%{opacity:.6}50%{opacity:1}}
+{{RAW_KF}}
+/* mobile: slot narrower than 640px (designed for 4×2) */
+@container (max-width: 640px){
+  .cl-in{aspect-ratio:21/10}
+  .cl-glow{left:-12cqw;top:-22cqw;width:70cqw;height:70cqw}
+  .cl-qm{display:none}
+  .cl-main{position:static}
+  .cl-tag{position:absolute;left:5cqw;top:5.6cqw;font-size:3cqw}
+  .cl-qs{position:absolute;left:9.4cqw;right:5cqw;bottom:5cqw;height:27cqw;margin:0}
+  .cl-q{top:auto;bottom:0}
+  .cl-q blockquote{font-size:5cqw;line-height:1.26}
+  .cl-q figcaption{margin-top:2.4cqw;font-size:3.2cqw}
+  .cl-bar{left:5cqw;top:auto;bottom:5cqw;width:.8cqw;height:27cqw;border-radius:99px}
+  .cl-bar::after{transform-origin:50% 0;animation-name:cl-barv}
+  .cl-side{display:none}
+  .cl-dots{display:flex;position:absolute;right:5cqw;top:4.2cqw;gap:1.8cqw}
+  .cl-dots u{text-decoration:none;width:7.6cqw;height:7.6cqw;border-radius:50%;display:grid;place-items:center;font:700 2.7cqw/1 'Inter',system-ui,sans-serif;color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);animation:cl-dot {{CYCLE}}s infinite;animation-delay:calc(var(--d) * 1s)}
+}
+@media (prefers-reduced-motion:reduce){.cl *,.cl-in::after{animation:none!important}.cl-q:first-child{opacity:1}}
+</style>
+<div class="cl-in">
+  <i class="cl-glow" aria-hidden="true"></i><span class="cl-qm" aria-hidden="true">“</span>
+  <div class="cl-main">
+    <span class="cl-tag">[ {{TAG_LABEL|clients}} ]</span>
+    <div class="cl-qs">
+{{#each QUOTE_LIST}}      <figure class="cl-q" style="--d:{{.delay}}"><blockquote>“{{.text}}”</blockquote><figcaption><b>{{.name}}</b> · {{.role}}{{#if .company}} at {{.company}}{{/if}}</figcaption></figure>
+{{/each}}    </div>
+  </div>
+  <i class="cl-bar" aria-hidden="true"></i>
+  <div class="cl-side" aria-hidden="true">
+{{#each QUOTE_LIST}}    <span class="cl-c" style="--d:{{.delay}}"><u>{{.initials}}</u><span><b>{{#if .company}}{{.company}}{{else}}{{.name}}{{/if}}</b><em>{{.tag}}</em></span></span>
+{{/each}}  </div>
+  <div class="cl-dots" aria-hidden="true">{{#each QUOTE_LIST}}<u style="--d:{{.delay}}">{{.initials}}</u>{{/each}}</div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<!-- Block: about-photo · dark square 3×3 (~307×308) · big portrait on the right (optional), name, rotating facts, chips.
+     data: PHOTO (url, optional), NAME_FIRST, NAME_LAST, ROLE, FACTS (up to 4 strings), CHIPS ([{text,color}]), TAG, INITIALS, ACCENT -->
+<div class="ab" role="group" aria-label="{{TAG|about me}}: {{NAME_FIRST|Your}} {{NAME_LAST|Name}}, {{ROLE|Your role}}" style="{{RAW_ACCENT_VARS}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+{{> page-bg ab}}
+.ab{container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:1/1;overflow:hidden;isolation:isolate;border-radius:inherit;background:#0b0b0d;color:#f4f1ec;font-family:'Inter',system-ui,sans-serif}
+{{> noise ab}}
+.ab *{box-sizing:border-box;margin:0}
+.ab-glow{position:absolute;right:-10cqw;top:-6cqw;width:80cqw;height:80cqw;z-index:-2;background:radial-gradient(closest-side,rgba(var(--a-rgb),.4),transparent);animation:ab-gl 5s ease-in-out infinite}
+.ab-ph{position:absolute;right:0;top:0;bottom:0;width:66cqw;z-index:-1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40%),linear-gradient(0deg,transparent 0,#000 22%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 40%),linear-gradient(0deg,transparent 0,#000 22%);mask-composite:intersect}
+.ab-ph img{display:block;width:100%;height:100%;object-fit:cover;object-position:52% 6%;filter:grayscale(1) contrast(1.06) brightness(.95);transform-origin:50% 25%;animation:ab-kb 16s ease-in-out infinite alternate}
+.ab-mono{position:absolute;right:8cqw;top:12cqw;font:700 46cqw/1 'Inter',system-ui,sans-serif;letter-spacing:-.06em;color:rgba(255,255,255,.07)}
+.ab-top{position:absolute;left:6.5cqw;top:6cqw;font:500 3.2cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.04em;color:rgba(244,241,236,.6)}
+.ab-in{position:absolute;left:6.5cqw;bottom:6.5cqw;width:60cqw;display:flex;flex-direction:column}
+.ab-n{font:700 11cqw/.96 'Inter',system-ui,sans-serif;letter-spacing:-.045em;animation:ab-up .9s cubic-bezier(.2,.8,.2,1) both}
+.ab-n span{display:block}
+.ab-n span:nth-child(2){animation:ab-up .9s cubic-bezier(.2,.8,.2,1) both .1s;background:linear-gradient(90deg,#f4f1ec 20%,var(--a-lt));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ab-r{margin-top:2.6cqw;font:500 3.7cqw/1.2 'Inter',system-ui,sans-serif;color:rgba(244,241,236,.75);animation:ab-up .9s cubic-bezier(.2,.8,.2,1) both .22s}
+.ab-tk{position:relative;margin-top:3.4cqw;height:11.5cqw;animation:ab-up .9s cubic-bezier(.2,.8,.2,1) both .32s}
+.ab-tk p{position:absolute;left:0;top:0;width:44cqw;opacity:0;font:400 3.5cqw/1.4 'Inter',system-ui,sans-serif;color:rgba(244,241,236,.82);animation:ab-tk 12s infinite;animation-delay:calc(var(--d) * 1s)}
+.ab-tk p::before{content:"";display:block;width:5cqw;height:.5cqw;margin-bottom:1.6cqw;background:var(--a)}
+.ab-ch{margin-top:3.2cqw;display:flex;gap:1.8cqw;flex-wrap:nowrap;animation:ab-up .9s cubic-bezier(.2,.8,.2,1) both .42s}
+.ab-c{display:inline-flex;align-items:center;gap:1.4cqw;height:6.8cqw;padding:0 2.6cqw;border-radius:99px;font:600 3cqw/1 'Inter',system-ui,sans-serif;white-space:nowrap;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.ab-c i{width:1.9cqw;height:1.9cqw;border-radius:50%}
+@keyframes ab-kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+@keyframes ab-gl{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes ab-up{from{opacity:0;transform:translateY(3cqw)}to{opacity:1;transform:none}}
+@keyframes ab-tk{0%{opacity:0;transform:translateY(1.6cqw)}3%{opacity:1;transform:translateY(0)}22%{opacity:1;transform:translateY(0)}25%{opacity:0;transform:translateY(-1.6cqw)}100%{opacity:0;transform:translateY(-1.6cqw)}}
+@media (prefers-reduced-motion:reduce){.ab *,.ab::after{animation:none!important}.ab-tk p:first-child{opacity:1}}
+</style>
+<i class="ab-glow" aria-hidden="true"></i>
+{{#if PHOTO}}<div class="ab-ph"><img alt="{{NAME_FIRST|Your}} {{NAME_LAST|Name}}" src="{{PHOTO}}"></div>{{else}}<span class="ab-mono" aria-hidden="true">{{INITIALS|YN}}</span>{{/if}}
+<span class="ab-top">[ {{TAG|about me}} ]</span>
+<div class="ab-in">
+  <h3 class="ab-n"><span>{{NAME_FIRST|Your}}</span><span>{{NAME_LAST|Name}}</span></h3>
+  <p class="ab-r">{{ROLE|Your role}}</p>
+  <div class="ab-tk" aria-label="Highlights">{{#each FACT_LIST}}<p style="--d:{{.delay}}">{{.text}}</p>{{/each}}</div>
+  <div class="ab-ch">{{#each CHIPS}}<span class="ab-c"><i style="background:{{.color|#e8503f}}"></i>{{.text}}</span>{{/each}}</div>
+</div>
+</div>

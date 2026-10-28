@@ -1,0 +1,20 @@
+<!-- Block: editorial ticker strip · 3×1 -->
+<div class="tk" role="img" aria-label="Interview, plan, build, preview, deliver">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;background:#f3eee4}
+.tk{--p:#f3eee4;--i:#16140f;--ac:#5b3df5;--m:rgba(22,20,15,.56);--l:rgba(22,20,15,.16);container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:306/78;overflow:hidden;isolation:isolate;border-radius:inherit;background:#f3eee4;color:#16140f;font-family:'Inter',system-ui,sans-serif}
+.tk *{box-sizing:border-box;margin:0}
+.tk::after{content:"";position:absolute;inset:-25%;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .04 0 0 0 0 .04 0 0 0 0 .05 2.5 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px;animation:tk-gr .9s steps(1) infinite}
+@keyframes tk-gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+@media (prefers-reduced-motion:reduce){.tk *,.tk::after{animation:none!important}}
+.tk-m{position:absolute;inset:0;display:flex;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.tk-m div{display:flex;flex:none;align-items:center;gap:6cqw;padding-right:6cqw;animation:tk-a 18s linear infinite}
+.tk-m span{font:italic 400 15cqw/1 'Instrument Serif',Georgia,serif;letter-spacing:-.03em;white-space:nowrap}
+.tk-m div span:nth-child(even){font-style:normal;color:var(--ac)}
+.tk-m b{flex:none;width:2.4cqw;height:2.4cqw;border-radius:50%;background:var(--i)}
+@keyframes tk-a{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+</style>
+<div class="tk-m" aria-hidden="true"><div><span>Interview</span><b></b><span>Plan</span><b></b><span>Build</span><b></b><span>Preview</span><b></b><span>Deliver</span><b></b><span>Interview</span><b></b><span>Plan</span><b></b><span>Build</span><b></b><span>Preview</span><b></b><span>Deliver</span><b></b></div><div><span>Interview</span><b></b><span>Plan</span><b></b><span>Build</span><b></b><span>Preview</span><b></b><span>Deliver</span><b></b><span>Interview</span><b></b><span>Plan</span><b></b><span>Build</span><b></b><span>Preview</span><b></b><span>Deliver</span><b></b></div></div>
+</div>

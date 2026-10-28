@@ -1,0 +1,31 @@
+<!-- Block: stat-counter · small stat tile (1×1, ~78×78) · an animated counter that climbs to NUMBER while a visual fills up.
+     data: NUMBER (int), LABEL ("projects"), VARIANT (ring | rings2 | mosaic — auto by number), ACCENT -->
+<div class="st" role="img" aria-label="{{NUMBER|10}}+ {{LABEL|years}}" style="{{RAW_ACCENT_VARS}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=JetBrains+Mono:wght@500&display=swap');
+{{> page-bg st}}
+.st{container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:1/1;overflow:hidden;isolation:isolate;border-radius:inherit;background:#0b0b0d;color:#f4f1ec;font-family:'Inter',system-ui,sans-serif}
+{{> noise st}}
+.st *{box-sizing:border-box;margin:0}
+{{#if IS_MOSAIC}}
+.st-m{position:absolute;left:50%;top:{{TOP}}%;transform:translate(-50%,-50%);display:grid;grid-template-columns:repeat(8,9cqw);gap:2.4cqw}
+.st-m i{display:block;aspect-ratio:1;border-radius:1.6cqw;background:#1b1b1f;animation:st-s 6s infinite;animation-delay:calc(var(--k) * {{CELL_DELAY}}s)}
+@keyframes st-s{0%{background:#1b1b1f;box-shadow:0 0 0 0 rgba(var(--a-rgb),0)}3%{background:var(--a);box-shadow:0 0 3cqw rgba(var(--a-rgb),.7)}10%,85%{background:rgba(var(--a-rgb),.38);box-shadow:0 0 0 0 rgba(var(--a-rgb),0)}93%,100%{background:#1b1b1f;box-shadow:0 0 0 0 rgba(var(--a-rgb),0)}}
+{{else}}
+.st-d i{position:absolute;left:50%;top:{{TOP}}%;width:4.6cqw;height:4.6cqw;margin:-2.3cqw;border-radius:50%;background:#2c2c31;transform:rotate(calc(var(--a) * 1deg)) translateY(calc(var(--r) * -1cqw));animation:st-d 6s infinite;animation-delay:calc(var(--k) * {{DOT_DELAY}}s)}
+@keyframes st-d{0%{background:#2c2c31;box-shadow:0 0 0 0 rgba(var(--a-rgb),0)}3%{background:var(--a);box-shadow:0 0 4cqw rgba(var(--a-rgb),.8)}9%,85%{background:var(--a);box-shadow:0 0 1.6cqw rgba(var(--a-rgb),.4)}93%,100%{background:#2c2c31;box-shadow:0 0 0 0 rgba(var(--a-rgb),0)}}
+{{/if}}
+.st-num{position:absolute;left:0;right:0;top:{{TOP}}%;transform:translateY(-56%);display:flex;justify-content:center;align-items:flex-start;font:700 28cqw/1 'Inter',system-ui,sans-serif;letter-spacing:-.05em;text-shadow:0 0 4cqw rgba(0,0,0,.85)}
+.st-win{height:1em;overflow:hidden}
+.st-reel{display:flex;flex-direction:column;animation:st-r 6s infinite}
+.st-reel span{display:block;height:1em;line-height:1;text-align:center}
+.st-num b{font-size:.55em;margin:.08em 0 0 .06em;color:var(--a);opacity:0;animation:st-pl 6s infinite}
+.st-lb{position:absolute;left:0;right:0;bottom:{{LABEL_BOTTOM}}cqw;text-align:center;font:500 9.5cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,236,.6);text-indent:.14em}
+@keyframes st-r{0%{transform:translateY(0);animation-timing-function:steps({{N}})}33.33%{transform:translateY(-{{N}}em)}86%{transform:translateY(-{{N}}em)}93%,100%{transform:translateY(0)}}
+@keyframes st-pl{0%,32%{opacity:0}37%{opacity:1}86%{opacity:1}93%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.st *,.st::after{animation:none!important}.st-reel{transform:translateY(-{{N}}em)}.st-num b{opacity:1}.st-d i{background:var(--a)}.st-m i{background:rgba(var(--a-rgb),.38)}}
+</style>
+{{#if IS_MOSAIC}}<div class="st-m" aria-hidden="true">{{#each CELLS}}<i style="--k:{{.}}"></i>{{/each}}</div>{{else}}<div class="st-d" aria-hidden="true">{{#each DOTS}}<i style="--a:{{.a}};--r:{{.r}};--k:{{.k}}"></i>{{/each}}</div>{{/if}}
+<div class="st-num" aria-hidden="true"><div class="st-win"><div class="st-reel">{{#each REEL}}<span>{{.}}</span>{{/each}}</div></div><b>+</b></div>
+<span class="st-lb" aria-hidden="true">{{LABEL|years}}</span>
+</div>

@@ -1,0 +1,25 @@
+<!-- Block: editorial "links soon" · 2×3. Replace the three rows with <a href> links when you have them -->
+<div class="sk" role="group" aria-label="Links coming soon">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;background:#f3eee4}
+.sk{--p:#f3eee4;--i:#16140f;--ac:#5b3df5;--m:rgba(22,20,15,.56);--l:rgba(22,20,15,.16);container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:5/8;overflow:hidden;isolation:isolate;border-radius:inherit;background:#f3eee4;color:#16140f;font-family:'Inter',system-ui,sans-serif}
+.sk *{box-sizing:border-box;margin:0}
+.sk::after{content:"";position:absolute;inset:-25%;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .04 0 0 0 0 .04 0 0 0 0 .05 2.5 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px;animation:sk-gr .9s steps(1) infinite}
+@keyframes sk-gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+@media (prefers-reduced-motion:reduce){.sk *,.sk::after{animation:none!important}}
+.sk-k{position:absolute;left:8cqw;top:8cqw;font:500 5cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--m);display:flex;gap:3cqw;align-items:center}
+.sk-k b{padding:1.6cqw 3cqw;border-radius:99px;background:var(--ac);color:var(--p);font-weight:500;animation:sk-p 2.4s infinite}
+.sk-t{position:absolute;left:8cqw;right:6cqw;top:24cqw;font:400 17cqw/.96 'Instrument Serif',Georgia,serif;letter-spacing:-.035em}
+.sk-t em{color:var(--ac);display:block}
+.sk-l{position:absolute;left:8cqw;right:8cqw;bottom:8cqw;list-style:none;padding:0}
+.sk-l li{position:relative;overflow:hidden;display:flex;justify-content:space-between;padding:4cqw 0;border-top:1px solid var(--l);font:500 5cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--m)}
+.sk-l li::after{content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;background:linear-gradient(90deg,transparent,rgba(91,61,245,.14),transparent);animation:sk-s 3.6s ease-in-out infinite;animation-delay:calc(var(--d) * .5s)}
+@keyframes sk-s{0%,30%{transform:translateX(0)}80%,100%{transform:translateX(480%)}}
+@keyframes sk-p{0%{box-shadow:0 0 0 0 rgba(91,61,245,.5)}70%,100%{box-shadow:0 0 0 3cqw rgba(91,61,245,0)}}
+</style>
+<div class="sk-k">[ links ] <b>soon</b></div>
+<h3 class="sk-t">Find it,<em>soon.</em></h3>
+<ul class="sk-l"><li style="--d:0"><span>GitHub</span><span>↗</span></li><li style="--d:1"><span>Web</span><span>↗</span></li><li style="--d:2"><span>Mail</span><span>↗</span></li></ul>
+</div>

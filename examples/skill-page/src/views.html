@@ -1,0 +1,28 @@
+<!-- Block: editorial two-views illustration · 3×3 / 4×4 -->
+<div class="vw" role="img" aria-label="One build, two layouts: 8-column desktop and 4-column phone">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;background:#f3eee4}
+.vw{--p:#f3eee4;--i:#16140f;--ac:#5b3df5;--m:rgba(22,20,15,.56);--l:rgba(22,20,15,.16);container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:1/1;overflow:hidden;isolation:isolate;border-radius:inherit;background:#f3eee4;color:#16140f;font-family:'Inter',system-ui,sans-serif}
+.vw *{box-sizing:border-box;margin:0}
+.vw::after{content:"";position:absolute;inset:-25%;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .04 0 0 0 0 .04 0 0 0 0 .05 2.5 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px;animation:vw-gr .9s steps(1) infinite}
+@keyframes vw-gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+@media (prefers-reduced-motion:reduce){.vw *,.vw::after{animation:none!important}}
+.vw-h{position:absolute;left:7cqw;top:7cqw;right:7cqw;font:400 10.5cqw/1 'Instrument Serif',Georgia,serif;letter-spacing:-.02em}
+.vw-h em{color:var(--ac)}
+.vw-d{position:absolute;left:7cqw;top:31cqw;width:64cqw;aspect-ratio:8/5.1;padding:2cqw;border:1px solid var(--l);border-radius:2.4cqw;background:#fbf8f2;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(5,1fr);gap:1.1cqw;animation:vw-fl 7s ease-in-out infinite}
+.vw-p{position:absolute;right:6cqw;top:41cqw;width:25cqw;aspect-ratio:9/16;padding:2.4cqw;border:1px solid var(--i);border-radius:4cqw;background:var(--p);display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(6,1fr);gap:1cqw;box-shadow:0 4cqw 8cqw rgba(22,20,15,.16);animation:vw-fl 7s ease-in-out -3.5s infinite}
+.vw-d i,.vw-p i{display:block;border-radius:.9cqw;background:rgba(22,20,15,.08);animation:vw-c 6s infinite;animation-delay:calc(var(--k) * .4s)}
+.vw-lb{position:absolute;bottom:7cqw;font:500 3.3cqw/1.2 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--m)}
+.vw-lb b{color:var(--i);font-weight:500}
+@keyframes vw-c{0%{background:rgba(22,20,15,.08)}6%{background:var(--ac)}16%,100%{background:rgba(22,20,15,.08)}}
+@keyframes vw-fl{0%{transform:translateY(0)}50%{transform:translateY(-1.6cqw)}100%{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.vw-d i,.vw-p i{background:rgba(91,61,245,.22)}}
+</style>
+<h3 class="vw-h">One build,<br><em>two layouts.</em></h3>
+<div class="vw-d" aria-hidden="true"><i style="grid-column:1/span 1;grid-row:1/span 1;--k:0"></i><i style="grid-column:2/span 1;grid-row:1/span 1;--k:1"></i><i style="grid-column:3/span 1;grid-row:1/span 1;--k:2"></i><i style="grid-column:1/span 3;grid-row:2/span 2;--k:3"></i><i style="grid-column:4/span 3;grid-row:1/span 3;--k:4"></i><i style="grid-column:7/span 2;grid-row:1/span 3;--k:5"></i><i style="grid-column:1/span 3;grid-row:4/span 2;--k:6"></i><i style="grid-column:4/span 2;grid-row:4/span 2;--k:7"></i><i style="grid-column:6/span 3;grid-row:4/span 2;--k:8"></i></div>
+<div class="vw-p" aria-hidden="true"><i style="grid-column:1/span 1;grid-row:1/span 1;--k:0"></i><i style="grid-column:2/span 1;grid-row:1/span 1;--k:1"></i><i style="grid-column:3/span 1;grid-row:1/span 1;--k:2"></i><i style="grid-column:4/span 1;grid-row:1/span 1;--k:3"></i><i style="grid-column:1/span 4;grid-row:2/span 2;--k:4"></i><i style="grid-column:1/span 2;grid-row:4/span 3;--k:5"></i><i style="grid-column:3/span 2;grid-row:4/span 3;--k:6"></i></div>
+<div class="vw-lb" style="left:7cqw"><b>Desktop</b> · 8 columns</div>
+<div class="vw-lb" style="right:6cqw"><b>Phone</b> · 4</div>
+</div>

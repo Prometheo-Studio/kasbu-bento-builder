@@ -1,0 +1,30 @@
+<!-- Block: editorial phase card · 2×3 -->
+<div class="pc" role="group" aria-label="Phase 03: Build">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;background:#f3eee4}
+.pc{--p:#f3eee4;--i:#16140f;--ac:#5b3df5;--m:rgba(22,20,15,.56);--l:rgba(22,20,15,.16);container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:5/8;overflow:hidden;isolation:isolate;border-radius:inherit;background:#f3eee4;color:#16140f;font-family:'Inter',system-ui,sans-serif}
+.pc *{box-sizing:border-box;margin:0}
+.pc::after{content:"";position:absolute;inset:-25%;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .04 0 0 0 0 .04 0 0 0 0 .05 2.5 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px;animation:pc-gr .9s steps(1) infinite}
+@keyframes pc-gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+@media (prefers-reduced-motion:reduce){.pc *,.pc::after{animation:none!important}}
+.pc-k{position:absolute;left:8cqw;right:8cqw;top:8cqw;display:flex;justify-content:space-between;font:500 5.2cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--m)}
+.pc-n{position:absolute;left:6cqw;top:20cqw;font:400 52cqw/.9 'Instrument Serif',Georgia,serif;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:.5cqw var(--i);animation:pc-lit 8s infinite;animation-delay:4s}
+.pc-t{position:absolute;left:8cqw;right:6cqw;top:80cqw;font:400 14cqw/1 'Instrument Serif',Georgia,serif;letter-spacing:-.03em}
+.pc-d{position:absolute;left:8cqw;right:8cqw;top:98cqw;font:400 5.3cqw/1.45 'Inter',system-ui,sans-serif;color:var(--m)}
+.pc-g{position:absolute;left:8cqw;right:8cqw;bottom:8cqw;display:flex;gap:2.4cqw}
+.pc-g span{padding:2cqw 3.6cqw;border:1px solid var(--l);border-radius:99px;font:500 4.2cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase}
+.pc-b{position:absolute;left:8cqw;right:8cqw;bottom:22cqw;height:.8cqw;background:var(--l);overflow:hidden}
+.pc-b i{position:absolute;inset:0;background:var(--ac);transform-origin:0 50%;transform:scaleX(0);animation:pc-bar 8s infinite;animation-delay:4s}
+@keyframes pc-lit{0%,22%{color:var(--ac);-webkit-text-stroke-color:var(--ac)}26%,100%{color:transparent;-webkit-text-stroke-color:#16140f}}
+@keyframes pc-bar{0%{transform:scaleX(0)}22%{transform:scaleX(1)}26%,100%{transform:scaleX(0)}}
+@media (prefers-reduced-motion:reduce){.pc-b i{transform:scaleX(1)}}
+</style>
+<div class="pc-k"><span>phase</span><span>03 / 04</span></div>
+<div class="pc-n" aria-hidden="true">03</div>
+<h3 class="pc-t">Build</h3>
+<p class="pc-d">Animated blocks from 15 templates, one accent color, linted.</p>
+<div class="pc-b" aria-hidden="true"><i></i></div>
+<div class="pc-g"><span>Templates</span><span>Lint</span></div>
+</div>

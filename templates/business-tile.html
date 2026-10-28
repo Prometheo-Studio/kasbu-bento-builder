@@ -1,0 +1,53 @@
+<!-- Block: business-tile · square 3×3 (~307×308) · a business or product card, light OR dark theme.
+     Wordmark text, headline with reveal, 4 chips that light up in turn, a marquee of clients/keywords, soft gradient + grid background.
+     Use it once per business you run. Drop in your real logo by replacing the .bt-logo text with an inline <svg> if you have one.
+     data: THEME (light | dark), LOGO_TEXT, TAG, HEADLINE_1, HEADLINE_2, SUB, CHIPS (4 strings), MARQUEE (list of strings), URL, ACCENT -->
+<{{#if URL}}a href="{{URL}}" target="_blank" rel="noopener"{{else}}div{{/if}} class="bt" style="{{RAW_ACCENT_VARS}};{{RAW_THEME}}" aria-label="{{LOGO_TEXT|Your business}}: {{HEADLINE_1|Make the next}} {{HEADLINE_2|move}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+{{> page-bg bt}}
+.bt{container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:1/1;overflow:hidden;isolation:isolate;border-radius:inherit;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;text-decoration:none;-webkit-tap-highlight-color:transparent}
+{{#if IS_DARK}}{{> noise bt}}{{else}}{{> noise-ink bt}}{{/if}}
+.bt *{box-sizing:border-box;margin:0}
+.bt-sky{position:absolute;inset:0;z-index:-2;background:radial-gradient(70% 45% at 12% 105%,var(--sky1),transparent 70%),radial-gradient(60% 45% at 92% 100%,var(--sky2),transparent 70%)}
+.bt-grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:12cqw 12cqw;-webkit-mask-image:radial-gradient(80% 70% at 50% 30%,#000,transparent);mask-image:radial-gradient(80% 70% at 50% 30%,#000,transparent)}
+.bt-blob{position:absolute;z-index:-1;border-radius:50%;filter:blur(5cqw);pointer-events:none}
+.bt-b1{left:-12cqw;bottom:-20cqw;width:72cqw;height:42cqw;background:var(--sky1);animation:bt-dr 9s ease-in-out infinite alternate}
+.bt-b2{right:-16cqw;bottom:-22cqw;width:72cqw;height:46cqw;background:var(--sky2);animation:bt-dr 11s ease-in-out infinite alternate-reverse}
+.bt-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:6.5cqw}
+.bt-top{display:flex;align-items:center;justify-content:space-between}
+.bt-logo{font:700 6.4cqw/1 'Inter',system-ui,sans-serif;letter-spacing:-.04em;display:inline-flex;align-items:center;gap:1.6cqw}
+.bt-logo i{width:2.6cqw;height:2.6cqw;border-radius:50%;background:var(--a);animation:bt-tw 2.8s ease-in-out infinite}
+.bt-tag{font:500 3.2cqw/1 'JetBrains Mono',ui-monospace,monospace;color:var(--soft);letter-spacing:.02em}
+.bt-h{font:600 10.2cqw/1.02 'Inter',system-ui,sans-serif;letter-spacing:-.035em}
+.bt-h span{display:block;animation:bt-up .9s cubic-bezier(.2,.8,.2,1) both}
+.bt-h span:nth-child(2){animation-delay:.12s;background:linear-gradient(90deg,var(--ink) 30%,var(--a) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bt-p{margin-top:3cqw;max-width:72cqw;font:400 3.9cqw/1.45 'Inter',system-ui,sans-serif;color:var(--soft);animation:bt-up .9s cubic-bezier(.2,.8,.2,1) both .25s}
+.bt-chips{display:grid;grid-template-columns:1fr 1fr;gap:2cqw}
+.bt-c{display:flex;align-items:center;justify-content:space-between;height:9.6cqw;padding:0 3.2cqw;border-radius:2.6cqw;background:var(--card);border:1px solid var(--line);font:600 3.7cqw/1 'Inter',system-ui,sans-serif;color:var(--ink);animation:bt-act 8s infinite;animation-delay:calc(var(--d) * 1s);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.bt-c i{font:400 2.8cqw/1 'JetBrains Mono',ui-monospace,monospace;font-style:normal;color:var(--soft);animation:bt-acti 8s infinite;animation-delay:calc(var(--d) * 1s)}
+.bt:hover .bt-c{transform:translateY(-.8cqw)}
+.bt-mq{margin:0 -6.5cqw;overflow:hidden;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.bt-mq-t{display:inline-flex;animation:bt-mq 26s linear infinite;font:500 3cqw/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+.bt-set{display:inline-flex}
+.bt-set b{font-weight:500;padding-right:5cqw}
+.bt-set b::after{content:"·";padding-left:5cqw;opacity:.5}
+@keyframes bt-up{from{opacity:0;transform:translateY(3cqw)}to{opacity:1;transform:none}}
+@keyframes bt-tw{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:.7}}
+@keyframes bt-dr{from{transform:translateX(-6cqw)}to{transform:translateX(8cqw)}}
+@keyframes bt-act{0%,22%{background:var(--ink);color:var(--bg);border-color:var(--ink)}28%,100%{background:var(--card);color:var(--ink);border-color:var(--line)}}
+@keyframes bt-acti{0%,22%{color:var(--a)}28%,100%{color:var(--soft)}}
+@keyframes bt-mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.bt *,.bt::after{animation:none!important}.bt-c:first-child{background:var(--ink);color:var(--bg)}}
+</style>
+<i class="bt-sky" aria-hidden="true"></i><i class="bt-grid" aria-hidden="true"></i><i class="bt-blob bt-b1" aria-hidden="true"></i><i class="bt-blob bt-b2" aria-hidden="true"></i>
+<div class="bt-in">
+  <div class="bt-top"><span class="bt-logo">{{LOGO_TEXT|Your Business}}<i></i></span><span class="bt-tag">[ {{TAG|my business}} ]</span></div>
+  <div>
+    <h3 class="bt-h"><span>{{HEADLINE_1|Make the next}}</span><span>{{HEADLINE_2|move.}}</span></h3>
+    <p class="bt-p">{{SUB|One sentence about what you do and for whom.}}</p>
+  </div>
+  <div class="bt-chips">{{#each CHIP_LIST}}<span class="bt-c" style="--d:{{.delay}}">{{.text}}<i>{{.num}}</i></span>{{/each}}</div>
+  <div class="bt-mq" aria-hidden="true"><div class="bt-mq-t"><span class="bt-set">{{#each MARQUEE_LIST}}<b>{{.}}</b>{{/each}}</span><span class="bt-set">{{#each MARQUEE_LIST}}<b>{{.}}</b>{{/each}}</span></div></div>
+</div>
+</{{#if URL}}a{{else}}div{{/if}}>

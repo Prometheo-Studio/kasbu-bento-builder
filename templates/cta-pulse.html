@@ -1,0 +1,38 @@
+<!-- Block: cta-pulse · tall card 2×3 (~193×308) · accent gradient with breathing pill rings and a pulsing call-to-action button.
+     data: HEADLINE_1, HEADLINE_2, SUB_1, SUB_2, BUTTON_LABEL, BUTTON_URL (WhatsApp wa.me/..., mailto:, calendar link), ACCENT -->
+<div class="sn" style="{{RAW_ACCENT_VARS}}">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Open+Sans:wght@400&display=swap');
+{{> page-bg sn}}
+.sn{container-type:inline-size;position:relative;display:block;width:100%;height:100%;aspect-ratio:5/8;overflow:hidden;isolation:isolate;border-radius:inherit;color:#fff;font-family:'Open Sans',system-ui,sans-serif;background:radial-gradient(130% 34% at 50% 0%,var(--a) 0%,rgba(var(--a-rgb),0) 100%),linear-gradient(180deg,var(--a-dk) 0%,rgba(var(--a-rgb),.5) 30%,rgba(var(--a-rgb),.12) 56%,rgba(0,0,0,0) 82%),#0d0d0d}
+{{> noise sn}}
+.sn *{box-sizing:border-box;margin:0}
+.sn-stage{position:absolute;left:50%;top:37.4cqw;width:0;height:0}
+.sn-ring{position:absolute;left:0;top:0;transform:translate(-50%,-50%);border-radius:999px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.05);animation:sn-br 3.2s ease-in-out infinite}
+.sn-ring.r5{width:112cqw;height:44cqw;animation-delay:-2.4s}
+.sn-ring.r4{width:100cqw;height:38cqw;animation-delay:-1.8s}
+.sn-ring.r3{width:92cqw;height:31cqw;animation-delay:-1.2s}
+.sn-ring.r2{width:86cqw;height:25cqw;animation-delay:-.6s}
+.sn-ring.r1{width:81cqw;height:20cqw}
+.sn-btn{position:absolute;left:0;top:0;transform:translate(-50%,-50%);width:78cqw;height:16.7cqw;border-radius:999px;display:grid;place-items:center;font:500 4.7cqw/1 'Open Sans',system-ui,sans-serif;color:#fff;background:linear-gradient(180deg,#1c1c1c,#101010);border:1px solid rgba(255,255,255,.2);box-shadow:0 2cqw 5cqw rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08);cursor:pointer;text-decoration:none;animation:sn-bp 2.4s ease-out infinite;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.sn-btn:hover{transform:translate(-50%,-50%) scale(1.03);border-color:rgba(255,255,255,.4)}
+.sn-btn::before,.sn-btn::after{content:"";position:absolute;left:50%;width:1.2cqw;height:1.2cqw;margin-left:-.6cqw;border-radius:50%;background:#bdbdbd}
+.sn-btn::before{top:-.6cqw}.sn-btn::after{bottom:-.6cqw}
+.sn-txt{position:absolute;left:0;right:0;top:90cqw;text-align:center;z-index:2;padding:0 6cqw}
+.sn-txt h3{font:700 8.7cqw/1.18 'Space Grotesk',system-ui,sans-serif;letter-spacing:-.01em;color:#fff}
+.sn-txt p{margin:4.4cqw auto 0;font:400 5.6cqw/1.45 'Open Sans',system-ui,sans-serif;color:#8a8a90}
+@keyframes sn-br{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:1}50%{transform:translate(-50%,-50%) scale(1.09);opacity:.45}}
+@keyframes sn-bp{0%{box-shadow:0 0 0 0 rgba(0,0,0,.6),0 0 0 0 rgba(0,0,0,.4),0 2cqw 5cqw rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08)}100%{box-shadow:0 0 0 6cqw rgba(0,0,0,0),0 0 0 12cqw rgba(0,0,0,0),0 2cqw 5cqw rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08)}}
+@media (prefers-reduced-motion:reduce){.sn *,.sn::after{animation:none!important}}
+</style>
+<div class="sn-stage" aria-hidden="true">
+  <i class="sn-ring r5"></i><i class="sn-ring r4"></i><i class="sn-ring r3"></i><i class="sn-ring r2"></i><i class="sn-ring r1"></i>
+</div>
+<div class="sn-stage">
+  <a class="sn-btn" href="{{BUTTON_URL|https://example.com}}" target="_blank" rel="noopener">{{BUTTON_LABEL|Let's talk}}</a>
+</div>
+<div class="sn-txt">
+  <h3>{{HEADLINE_1|Your whole business,}}<br>{{HEADLINE_2|in sync.}}</h3>
+  <p>{{SUB_1|Got loose pieces?}}<br>{{SUB_2|Let's talk.}}</p>
+</div>
+</div>
